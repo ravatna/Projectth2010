@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.projectth.mobile.kt1s.ReportCaseActivity">
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnReportCaseOverAll"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="ลักษณะเกิดเหตุ" />
+
+        <Button
+            android:id="@+id/btnReportP"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="ความเสียหายรถประกัน" />
+        <Button
+            android:id="@+id/btnReportC"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="ความเสียบหายคู่กรณี" />
+    </LinearLayout>
+
+</LinearLayout>

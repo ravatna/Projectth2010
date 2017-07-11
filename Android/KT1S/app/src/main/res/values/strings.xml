@@ -1,0 +1,212 @@
+<resources>
+    <string name="app_name">KT1S</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_task">TaskActivity</string>
+    <string name="title_activity_task_detail">TaskDetailActivity</string>
+    <string name="title_activity_take_photo_case">TakePhotoCaseActivity</string>
+    <string name="title_activity_report_case">ReportCaseActivity</string>
+    <string name="title_activity_report_over_all">ReportOverAllActivity</string>
+    <string name="title_activity_report_p">ReportPActivity</string>
+    <string name="title_activity_report_c">ReportCActivity</string>
+    <string name="title_activity_tab_report_c">TabReportCActivity</string>
+
+
+    <string-array name="list_type_license_card">
+        <item>ประเภท 1</item>
+        <item>ประเภท 2</item>
+
+    </string-array>
+
+    <string-array name="list_damage">
+        <item>กันชนหน้า</item>
+        <item>กันชนหลัง</item>
+
+    </string-array>
+
+
+    <string-array name="list_province">
+        <item>กรุงเทพฯ</item>
+        <item>กระบี่</item>
+
+    </string-array>
+
+    <string-array name="list_damage_level">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+
+    <string-array name="list_car_type">
+        <item>10ล้อ</item>
+        <item>6ล้อ</item>
+        <item>ตู้</item>
+        <item>บัส</item>
+        <item>รถกระบะ</item>
+        <item>รถจักรยานถีบสามล้อ</item>
+        <item>รถจักรยานยนต์</item>
+        <item>รถจักรยานสองล้อถีบ</item>
+        <item>รถตุ๊ก</item>
+        <item>รถบรรทุก</item>
+        <item>รถบัส</item>
+        <item>รถสามล้อเครื่อง</item>
+        <item>รถสิบล้อพ่วง</item>
+        <item>รถสี่ล้อเล็ก</item>
+        <item>รถเก๋ง</item>
+        <item>รถเข็น</item>
+        <item>รถเครน</item>
+        <item>รถเทรนเลอร์หัวลาก</item>
+        <item>รถเมล์</item>
+        <item>รถโพค์ลิต</item>
+        <item>รถไถนา</item>
+        <item>แท็กซี่</item>
+    </string-array>
+    <string-array name="list_car_brands">
+        <item>LEYLAND</item>
+        <item>ALFA ROMEO</item>
+        <item>ASTON MARTIN</item>
+        <item>AUDI</item>
+        <item>BENTLEY</item>
+        <item>BENZ</item>
+        <item>BMW</item>
+        <item>BUICK</item>
+        <item>CADILLAC</item>
+        <item>CHERY</item>
+        <item>CHEVROLET</item>
+        <item>CHRYSLER</item>
+        <item>CITROEN</item>
+        <item>DAEWOO</item>
+        <item>DAIHATSU</item>
+        <item>DATSUN</item>
+        <item>DAYON</item>
+        <item>DEVA</item>
+        <item>DFSK</item>
+        <item>DFSK</item>
+        <item>DODGE</item>
+        <item>dsadqweqwe</item>
+        <item>DUCATI</item>
+        <item>DUCATI</item>
+        <item>FERRARI</item>
+        <item>FIAT</item>
+        <item>FORD</item>
+        <item>GPX</item>
+        <item>HINO</item>
+        <item>HOLDEN</item>
+        <item>HONDA</item>
+        <item>HUMMER</item>
+        <item>HYUNDAI</item>
+        <item>ISUZU</item>
+        <item>IVECO</item>
+        <item>JAGUAR</item>
+        <item>JEEP</item>
+        <item>KAWASAKI</item>
+        <item>KIA</item>
+        <item>LAMBORGHINI</item>
+        <item>LANCIA</item>
+        <item>LANDROVER</item>
+        <item>LEXUS</item>
+        <item>LINCOLN</item>
+        <item>LOTUS</item>
+        <item>MAN</item>
+        <item>MASERATI</item>
+        <item>MAZDA</item>
+        <item>MERCURY</item>
+        <item>MG</item>
+        <item>MINI</item>
+        <item>MITSUBISHI</item>
+        <item>MUSSO</item>
+        <item>NAZA</item>
+        <item>NISSAN</item>
+        <item>OLDSMOBILE</item>
+        <item>OPEL</item>
+        <item>PEUGEOT</item>
+        <item>PONTIAC</item>
+        <item>PORSCHE</item>
+        <item>PROTON</item>
+        <item>RENAULT</item>
+        <item>ROLLS-ROYCE</item>
+        <item>ROVER</item>
+        <item>SAAB</item>
+        <item>Scania</item>
+        <item>SEAT</item>
+        <item>SKODA</item>
+        <item>SUBARU</item>
+        <item>SUZUKI</item>
+        <item>SUZUKI</item>
+        <item>TATA</item>
+        <item>THAI RUNG</item>
+        <item>TOYOTA</item>
+        <item>VESPA</item>
+        <item>VOLKSWAGEN</item>
+        <item>VOLVO</item>
+        <item>YAMAHA</item>
+        <item>ซันลอง</item>
+        <item>พ่วง</item>
+        <item>อื่นๆ</item>
+    </string-array>
+
+    <string-array name="list_insurance_company">
+        <item>นิวแฮมพ์เชอร์ประกันภัย</item>
+        <item>ซมโปะ ประกันภัย (ประเทศไทย) จำกัด(มหาชน)</item>
+        <item>รอตรวจสอบ</item>
+        <item>บริษัท ไดเร็ค เอเชีย (ประเทศไทย) จำกัด</item>
+        <item>สยามซิตี้ประกันภัย จำกัด</item>
+        <item>ฟีนิกซ์ ประกันภัย (ประเทศไทย) จำกัด (มหาชน)           สำนักงานใหญ่</item>
+        <item>สหมงคลประกันภัย จำกัด (มหาชน)</item>
+        <item>บริษัท ฟอลคอนประกันภัย จำกัด (มหาชน)</item>
+        <item>เอราวัณประกันภัย จำกัด (มหาชน) </item>
+        <item>บริษัท คิวบีอี ประกันภัย (ประเทศไทย) จำกัด (มหาชน)</item>
+        <item>บริษัท เอ ไอ จี ประกันภัย (ประเทศไทย) จำกัด (มหาชน)</item>
+        <item>บริษัท ไทยประกันภัย</item>
+        <item>ประกันภัยไทยวิวัฒน์ จำกัด(มหาชน)</item>
+        <item>สัญญาประกันภัย จำกัด (มหาชน)</item>
+        <item>บริษัท โตเกียวมารินประกันภัย จำกัด</item>
+        <item>บริษัท ไทยพาณิชย์สามัคคีประกันภัย จำกัด (มหาชน)</item>
+        <item>บริษัท สินทรัพย์ประกันภัย จำกัด (มหาชน)</item>
+        <item>กลางคุ้มครองผู้ประสบภัยจากรถ</item>
+        <item>นิวอินเดียแอสชัวรันซ์ จำกัด  ( สาขาประเทศไทย )</item>
+        <item>สามัคคีประกันภัย  จำกัด </item>
+        <item>บริษัท ไทยพัฒนาประกันภัย จำกัด</item>
+        <item>บริษัท ไอโออิกรุงเทพประกันภัย จำกัด (มหาชน)</item>
+        <item>บริษัท แอลเอ็มจี ประกันภัย จำกัด</item>
+        <item>บริษัท เทเวศประกันภัย จำกัด (มหาชน)</item>
+        <item>บริษัท เค เอส เค ประกันภัย(ประเทศไทย) จำกัด</item>
+        <item>พุทธธรรมประกันภัย จำกัด(มหาชน) </item>
+        <item>รอตรวจสอบบริษัทประกันภัย </item>
+        <item>แอกซ่าประกันภัย จำกัด (มหาชน)</item>
+        <item>ประกันคุ้มภัยประกันภัย จำกัด(มหาชน) </item>
+        <item>มิตรแท้ประกันภัย</item>
+        <item>บริษัท ไทยศรีประกันภัย จำกัด (มหาชน)</item>
+        <item>บริษัท ทูนประกันภัย จำกัด (มหาชน)</item>
+        <item>กรุงเทพประกันภัย จำกัด(มหาชน)</item>
+        <item>ทิพยประกันภัย จำกัด (มหาชน)</item>
+        <item>ธนชาตประกันภัย จำกัด (มหาชน) </item>
+        <item>วิริยะประกันภัย</item>
+        <item>ไทยไพบูลย์ประกันภัย  จำกัด(มหาชน)</item>
+        <item>ไม่มีประกันภัย</item>
+        <item>กรุงไทยพานิชประกันภัย จำกัด(มหาชน)</item>
+        <item>ซมโปะ ประกันภัย (ประเทศไทย)  จำกัด   (มหาชน)</item>
+        <item>ไทยเศรษฐกิจประกันภัย จำกัด(มหาชน)</item>
+        <item>จรัญประกันภัย จำกัด (มหาชน)</item>
+        <item> สินมั่นคง ประกันภัย</item>
+        <item> เอ็ม เอส ไอ จี ประกันภัย (ประเทศไทย) จำกัด (มหาชน)</item>
+        <item> เอเชียประกันภัย 1950 จำกัด (มหาชน)</item>
+        <item> อินทรประกันภัย จำกัด (มหาชน)</item>
+        <item> อาคเนย์ประกันภัย จำกัด (มหาชน)</item>
+        <item> อลิอันซ์ ซี.พี. ประกันภัย จำกัด (มหาชน)</item>
+        <item> ศรีอยุธยา เจนเนอรัล ประกันภัย จำกัด (มหาชน)</item>
+        <item>บริษัท เมืองไทยประกันภัย จำกัด (มหาชน)</item>
+        <item> มิตซุย สุมิโตโม อินชัวรันซ์ จำกัด สาขาประเทศไทย</item>
+        <item>บริษัท บางกอกสหประกันภัย จำกัด (มหาชน)</item>
+        <item>นำสินประกันภัย จำกัด (มหาชน)</item>
+        <item>บริษัท นวกิจประกันภัย จำกัด (มหาชน)</item>
+        <item>บริษัท สามัคคีประกันภัย จำกัด (มหาชน)</item>
+        <item>บริษัท เจ้าพระยาประกันภัย จำกัด (มหาชน)</item>
+        <item> สัจจะประกันภัย จำกัด (มหาชน)</item>
+    </string-array>
+    <string name="title_activity_report_asset">ReportAssetActivity</string>
+    <string name="title_activity_report_injurk">ReportInjurkActivity</string>
+    <string name="title_activity_report_case_detail">ReportCaseDetailActivity</string>
+    <string name="title_activity_report_pdamage">ReportPDamageActivity</string>
+    <string name="title_activity_report_cdamage">ReportCDamageActivity</string>
+</resources>

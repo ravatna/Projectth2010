@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.projectth.mobile.kt1s">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TaskActivity"
+            android:label="@string/title_activity_task"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            ]บ
+        </activity>
+        <activity
+            android:name=".TaskDetailActivity"
+            android:label="@string/title_activity_task_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_task_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProgressMenuActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ManagePActivity" />
+        <activity
+            android:name=".TakePhotoCaseActivity"
+            android:label="@string/title_activity_take_photo_case"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ReportCaseActivity"
+            android:label="@string/title_activity_report_case"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".ReportOverAllActivity"
+            android:label="@string/title_activity_report_over_all"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".ReportPActivity"
+            android:label="@string/title_activity_report_p"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".ReportCActivity"
+            android:label="@string/title_activity_report_c"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TabReportCActivity"
+            android:label="@string/title_activity_tab_report_c"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".ReportAssetActivity"
+            android:label="@string/title_activity_report_asset"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".ReportInjurkActivity"
+            android:label="@string/title_activity_report_injurk"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".ReportCaseDetailActivity"
+            android:label="@string/title_activity_report_case_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".ReportPDamageActivity"
+            android:label="@string/title_activity_report_pdamage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".ReportCDamageActivity"
+            android:label="@string/title_activity_report_cdamage"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

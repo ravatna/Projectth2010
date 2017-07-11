@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.projectth.mobile.kt1s.TaskActivity"
+    android:padding="4dp"
+    >
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingTop="25dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+        <LinearLayout
+            android:id="@+id/status_bar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/status_new_job"
+             >
+
+            <TextView
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                android:id="@+id/txvStatusJob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="งานใหม่" />
+
+            <TextView
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                android:id="@+id/txvTimeAcceptCase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_weight="1"
+                android:text="เวลารับแจ้ง: " />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/txvCaseCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="รหัส: KT000001 เลขเคลม: XXXXXXXXXXXX"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                android:id="@+id/txvPName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="บ. ประกัน : วิริยะประกันภัย" />
+            <TextView
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                android:id="@+id/txvCarBrand_plate_license"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="ยี่ห้อ/ทะเบียน:" />
+            <TextView
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                android:id="@+id/txvAccidentPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="ที่เกิดเหตุ: Place address" />
+
+            <RelativeLayout
+                android:layout_marginTop="15dp"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <Button
+                    android:id="@+id/btnAccepCase"
+                    android:textColor="#ffffff"
+                    android:background="@color/colorButtonPrimary"
+                    android:layout_width="90dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="รับงาน" />
+
+                <Button
+                    android:id="@+id/btnCancelCase"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:background="@color/colorButtonWarning"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+
+                    android:text="ไม่รับงาน" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

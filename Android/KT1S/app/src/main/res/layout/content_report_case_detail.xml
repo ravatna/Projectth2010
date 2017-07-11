@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    tools:context="com.projectth.mobile.kt1s.ReportPActivity">
+    <Button
+        android:layout_gravity="right"
+        android:text="บันทึก"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:textAlignment="textEnd"
+
+                    android:layout_gravity="center_vertical"
+                    android:text="การเกิดเหตุตามรับแจ้ง" />
+
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:text="การเกิดเหตุจากการตรวจสอบ"
+                    android:textAlignment="textEnd" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1.6"
+                    android:background="@drawable/textbox_background"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:textAlignment="textEnd"
+                    android:text="สถานที่เกิดเหตุ" />
+
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:textAlignment="textEnd"
+                    android:text="อำเภอ" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/textbox_background"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp" android:textAlignment="textEnd"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:layout_gravity="center_vertical"
+                    android:text="จังหวัด" />
+
+
+
+
+                <Spinner
+                    android:entries="@array/list_province"
+                    android:id="@+id/spinner"
+                    android:layout_width="240dp"
+android:layout_gravity="center_vertical"
+                    android:background="@drawable/textbox_background"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:text="พื้นที่ ส.น. ออกตรวจสอบ"
+                    android:textAlignment="textEnd" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp" android:textAlignment="textEnd"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:layout_gravity="center_vertical"
+                    android:text="เรื่องถึง ส.น." />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4" android:textAlignment="textEnd"
+                    android:text="ชื่อ เจ้าพนักงานสอบสวน" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:text="ความเห็นเจ้าพนักงานสอบสวน"
+                    android:textAlignment="textEnd" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1.6"
+                    android:background="@drawable/textbox_background"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp" android:textAlignment="textEnd"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:layout_gravity="center_vertical"
+                    android:text="ประจำวันข้อที่" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:layout_weight=".4"
+                    android:text="วันที่" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/textbox_background"
+                    android:text="" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

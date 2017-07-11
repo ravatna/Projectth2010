@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:gravity="center_vertical">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="KT E-Claim"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/indigo"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal|center_vertical"
+
+        android:orientation="vertical"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:gravity="center_vertical">
+
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/lnrLogin"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <ImageView
+                    android:src="@drawable/user64"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+  />
+                <EditText
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/textbox_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/edtUsername"
+                    android:textColorHint="#0476B9"
+                    android:hint="ชื่อผู้ใช้งาน"
+                    android:gravity="center_horizontal"
+                    android:textColor="#0476B9" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+                <ImageView
+                    android:src="@drawable/padlock64"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+ />
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/textbox_background"
+                    android:gravity="center_horizontal"
+                    android:hint="รหัสผ่าน"
+                    android:inputType="textPassword"
+                    android:textColor="#0476B9"
+
+                    android:textColorHint="#0476B9" />
+            </LinearLayout>
+
+            <Button
+                android:text="เข้าสู่ระบบ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLogin"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:background="@drawable/selector_button_cyan"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:text="ลืมรหัสผ่าน?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:textSize="15sp"
+                android:textColor="#002060"
+                android:gravity="right"
+                android:visibility="invisible"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:text="V.1.0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvVersion"
+            android:gravity="center"
+            android:textColor="#002060"
+            android:textSize="10sp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
+</LinearLayout>

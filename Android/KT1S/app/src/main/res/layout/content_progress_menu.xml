@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="8dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.projectth.mobile.kt1s.ProgressMenuActivity"
+    tools:showIn="@layout/activity_progress_menu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txvCaseCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="รหัส: KT000001 เลขเคลม: XXXXXXXXXXXX"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                android:id="@+id/txvPName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="บ. ประกัน : วิริยะประกันภัย" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnReportCaseOverAll"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:background="@drawable/selector_button_cyan"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:text="ใบรับแจ้ง" />
+
+            <Button
+                android:layout_marginLeft="30dp"
+                 android:id="@+id/btnReportP"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:background="@drawable/selector_button_cyan"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:text="ข้อมูลรถ ป." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnReportC"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:background="@drawable/selector_button_cyan"
+                android:text="ข้อมูลรถ ค."
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnReportAsset"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/selector_button_cyan"
+                android:text="ทรัพย์สิน ค."
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnReportInjurk"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector_button_cyan"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="ผู้บาดเจ็บ" />
+
+            <Button
+                android:id="@+id/btnReportPDamage"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/selector_button_cyan"
+                android:text="เสียหายรถ ป."
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector_button_cyan"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:id="@+id/btnReportCDamage"
+            android:text="ความเสียหายรถ ค." />
+
+            <Button
+                android:id="@+id/btnReportCaseDetail"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/selector_button_cyan"
+                android:text="รายงานการเกิตเหตุ"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_button_cyan"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:id="@+id/btnManageK"
+                android:text="ส่งข้อมูล" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:background="@drawable/selector_button_cyan"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:id="@+id/btnPhone1"
+
+                android:text="เบอร์ผู้จัดการ" />
+
+            <Button
+                android:id="@+id/btnPhone2"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/selector_button_cyan"
+                android:text="เบอร์รับแจ้ง"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

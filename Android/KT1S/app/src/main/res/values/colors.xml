@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="indigo">#000066</color>
+
+    <color name="status_new_job">#FF3636</color>
+    <color name="status_current_job">#3344FF</color>
+    <color name="status_send_job">#696464</color>
+
+    <color name="colorButtonPrimary">#3f87c4</color>
+    <color name="colorButtonWarning">#eea033</color>
+    <color name="colorButtonDanger">#cb3d39</color>
+
+</resources>
