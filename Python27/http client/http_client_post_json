@@ -1,0 +1,10 @@
+import http.client
+import json
+
+connection = http.client.HTTPSConnection('http://www.kteclaimsurvay.com:5792')
+headers = {'Content-Type': 'application/json'}
+
+foo = {'claim_officer':'kt000'}
+json_foo = json.dump(foo)
+
+connection.request('POST','/login/list_claim_api',json_foo,headers)

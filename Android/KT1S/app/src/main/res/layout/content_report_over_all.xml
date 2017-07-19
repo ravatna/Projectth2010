@@ -32,12 +32,16 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:id="@+id/edt_inform_datetime"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_weight="1.6"
                     android:background="@drawable/textbox_background"
+
+
                     android:ems="10"
                     android:inputType="text"
                     android:text="" />
@@ -59,7 +63,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_claim_id_company"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -84,7 +90,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_claim_id_self"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -109,7 +117,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_company_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -134,7 +144,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_insurance_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -159,7 +171,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:id="@+id/edt_insurance_id"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -184,7 +198,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:id="@+id/edt_insurance_start_date"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -209,7 +225,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:id="@+id/edt_insurance_end_date"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -234,7 +252,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:id="@+id/edt_insurance_type"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -259,7 +279,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:id="@+id/edt_garage"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -284,7 +306,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:id="@+id/edt_car_brand"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -309,7 +333,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:id="@+id/edt_car_no"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -334,7 +360,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_vehicle_identification_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -359,7 +387,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_insurance_owner_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -385,7 +415,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_insurance_fix_name_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -410,7 +442,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_insurance_fix_name_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -435,7 +469,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_dd_owner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -460,7 +496,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_dd_partie"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -486,7 +524,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_driver_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -511,7 +551,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_driver_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -536,7 +578,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_accident_des"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:layout_marginLeft="4dp"
@@ -562,7 +606,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_accident_inform"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -587,7 +633,9 @@
                     android:textAlignment="textEnd" />
 
                 <EditText
-                    android:id="@+id/edtCaseCode"
+                    android:enabled="false"
+                    android:textColor="#ff0000"
+                    android:id="@+id/edt_ps"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:layout_marginLeft="4dp"

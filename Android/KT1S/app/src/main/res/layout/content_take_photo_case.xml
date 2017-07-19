@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.projectth.mobile.kt1s.TakePhotoCaseActivity"
     tools:showIn="@layout/activity_take_photo_case">
@@ -13,23 +13,128 @@
 
     <LinearLayout
         android:layout_width="300dp"
-        android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/btnTakePicture"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:text="คู่กรณีที่ 1" />
-
-        <Button
-            android:id="@+id/btnManageP"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
-            android:text="+ เพิ่มคู่กรณี" />
+            android:text="ถ่ายภาพ" />
 
 
     </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="360dp"
+                    android:layout_height="280dp"
+
+                    app:srcCompat="@drawable/gradient_light_red" />
+
+                <ImageButton
+                    android:layout_gravity="center_horizontal"
+
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:textSize="14sp"
+                    android:background="#00ffffff"
+                    android:src="@drawable/ic_exclamation"/>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="360dp"
+                    android:layout_height="280dp"
+
+                    app:srcCompat="@drawable/gradient_light_red" />
+
+                <Button
+                    android:layout_gravity="center_horizontal"
+
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:textSize="14sp"
+                    android:text="ลบภาพ" />
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="360dp"
+                    android:layout_height="280dp"
+                    app:srcCompat="@drawable/gradient_light_red" />
+
+                <Button
+                    android:layout_gravity="center_horizontal"
+
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:textSize="14sp"
+                    android:text="ลบภาพ" />
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="360dp"
+                    android:layout_height="280dp"
+
+                    app:srcCompat="@drawable/gradient_light_red" />
+
+                <Button
+                    android:layout_gravity="center_horizontal"
+
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:textSize="14sp"
+                    android:text="ลบภาพ" />
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </LinearLayout>

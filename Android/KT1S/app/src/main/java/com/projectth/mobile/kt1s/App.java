@@ -9,18 +9,22 @@ import org.json.JSONObject;
 
 class App {
 
+
+
+ClaimOfficer claimOfficer = new ClaimOfficer();
     static private App object;
 
-    JSONObject loginObject;
-    JSONObject customerMember;
-    JSONArray transactionDialies;
-    JSONArray redeemTransactions;
-    JSONArray giftCatalogs;
-    JSONArray selectNews;
-    JSONObject objNews;
-    String cookieToken,formToken;
+    public static final String MY_PREFS = "projectth_kt1s";
+    public static final String LOGIN_JSON = "login_json";
+    public static final String CURRENT_INFORM_ID = "current_inform_id";
+    public static final String CALL_TO_P = "call_to_p";
+    public static final String CHECK_POINT = "check_point";
 
-    String m_server =  "http://suscoapidev-iCRM.atlasicloud.com"; // "http://192.168.88.197/SUSCOAPI/";
+
+    JSONObject loginObject;
+    JSONObject claim_officer;
+
+    String m_server =  "http://www.kteclaimsurvay.com:5792";
 
     static public App getInstance(){
         if(object == null){
@@ -29,4 +33,14 @@ class App {
 
         return object;
     }
+
+
+    class ClaimOfficer {
+        String id = "";
+        String fullname = "";
+        String pass = "";
+        String user = "";
+
+    }
+
 }

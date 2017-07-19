@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
@@ -27,21 +28,30 @@ import java.util.ArrayList;
 public class CaseAdapter extends BaseAdapter {
     private Context ctx;
     private static LayoutInflater inflater=null;
-    private ArrayList<CaseItem> mapArrayList ;
+    private ArrayList<Inform> mapArrayList ;
 
-    public ImageView imageLoader;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
-    public CaseAdapter(Context _ctx , ArrayList<CaseItem> mapList) {
+
+
+    public CaseAdapter(Context _ctx , ArrayList<Inform> mapList) {
         ctx = _ctx;
         mapArrayList = mapList;
         inflater = (LayoutInflater)ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        sharedPreferences = ctx.getSharedPreferences(App.MY_PREFS, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
     }
 
     public int getCount() {
-        return mapArrayList.size();
+        if(mapArrayList != null)
+            return mapArrayList.size();
+        else
+            return 0;
     }
 
-    public CaseItem getItem(int position) {
+    public Inform getItem(int position) {
         return mapArrayList.get(position);
     }
 
@@ -54,41 +64,54 @@ public class CaseAdapter extends BaseAdapter {
         View vi=convertView;
         if(convertView==null)
             vi = inflater.inflate(R.layout._item_task, null);
-            final CaseItem item= mapArrayList.get(position);
+            final Inform item= mapArrayList.get(position);
 
         TextView txvCaseCode = (TextView)vi.findViewById(R.id.txvCaseCode);
-//        TextView txvPPhone = (TextView)vi.findViewById(R.id.txvPPhone);
-        TextView txvPName = (TextView)vi.findViewById(R.id.txvPName);
+//      TextView txvPPhone = (TextView)vi.findViewById(R.id.txvPPhone);
+        TextView txvInsuranceCompanyName = (TextView)vi.findViewById(R.id.txvInsuranceCompanyName);
         TextView txvStatusJob = (TextView)vi.findViewById(R.id.txvStatusJob);
         TextView txvAccidentPlace = (TextView)vi.findViewById(R.id.txvAccidentPlace);
         TextView txvTimeAcceptCase = (TextView)vi.findViewById(R.id.txvTimeAcceptCase);
         TextView txvCarBrandLicensePlate = (TextView)vi.findViewById(R.id.txvCarBrand_plate_license);
         Button btnAcceptCase = (Button)vi.findViewById(R.id.btnAccepCase);
         Button btnCancelCase = (Button)vi.findViewById(R.id.btnCancelCase);
+
         LinearLayout lnrStatus = (LinearLayout)vi.findViewById(R.id.status_bar);
 
 
         // Setting all values in listview
 
-        txvCaseCode.setText(item.mKTCode + " เลขเคลม :" + item.mClaimCode); // รหัสรับแจ้ง
+        txvCaseCode.setText(item.claim_id_comapany + " เลขเคลม : " + item.claim_id_self ); // รหัสรับแจ้ง
 
 //      txvPPhone.setText(item.mPPhone); // เบอร์ติดต่อ ป.
-        txvPName.setText(item.mPName); // ชื่อติดต่อ ป.
-        txvStatusJob.setText(item.mStatusJob); // สถานะงาน
-        txvCarBrandLicensePlate.setText("ยี่ห้อ/ทะเบียน :" + item.mCarBrand +"/" + item.mLicensePlate);
-        if(item.mStatusJob.equals("งานใหม่"))
+        txvInsuranceCompanyName.setText("บ.ประกัน : " + item.company_name); // ชื่อติดต่อ ป.
+
+        txvCarBrandLicensePlate.setText("ยี่ห้อ/ทะเบียน : " + item.car_brand +"/" + item.car_no);
+        btnCancelCase.setVisibility(View.INVISIBLE);
+
+        if(item.status.equals("active"))
         {
             lnrStatus.setBackgroundColor(ctx.getResources().getColor(R.color.status_new_job));
-        }else if(item.mStatusJob.equals("กำลังทำ"))
+            txvStatusJob.setText("งานใหม่"); // สถานะงาน
+        }else if(item.status.equals("accept"))
         {
             lnrStatus.setBackgroundColor(ctx.getResources().getColor(R.color.status_current_job));
-        }else if(item.mStatusJob.equals("ส่งข้อมูลแล้ว"))
+
+            btnAcceptCase.setText("ดูเคลม");
+            txvStatusJob.setText("กำลังดำเนินการ"); // สถานะงาน
+        }
+        else if(item.status.equals("verify") || item.status.equals("send"))
         {
+
             lnrStatus.setBackgroundColor(ctx.getResources().getColor(R.color.status_send_job));
+            txvStatusJob.setText("ตรวจสอบแล้ว"); // สถานะงาน
+            btnAcceptCase.setText("ดูเคลม");
         }
 
-        txvAccidentPlace.setText(item.mAccidentPlace); // สถานที่เกิดเหตุ
-        txvTimeAcceptCase.setText(item.mTimeAcceptCase); // เวลารับแจ้งได้รับช้อมูล
+
+
+        txvAccidentPlace.setText("สถานที่เกิดเหตุ : " + item.accident_place); // สถานที่เกิดเหตุ
+        txvTimeAcceptCase.setText(item.inform_datetime); // เวลารับแจ้งได้รับช้อมูล
 
         btnAcceptCase.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,7 +129,18 @@ public class CaseAdapter extends BaseAdapter {
                                         dialog.dismiss();
 
                                         Intent intent = new Intent(ctx,TaskDetailActivity.class);
+
+                                        // put content to prefernce
+
+                                        editor.putString(App.CURRENT_INFORM_ID,item.claim_id_comapany);
+                                        //editor.putBoolean(App.CALL_TO_P,true);
+                                        editor.commit();
+
+
+
+                                        // start activity
                                         ctx.startActivity(intent);
+
 
                                     }
                                 })
@@ -138,10 +172,11 @@ public class CaseAdapter extends BaseAdapter {
                                                         int which) {
                                         dialog.dismiss();
 
-                                        //@todo send command cancel by user to service
-                                        mapArrayList.get(position).mIsCancelJob = 1;
-                                        mapArrayList.remove(position);
-                                        CaseAdapter.this.notifyDataSetChanged();
+                                        // not yet implement for now
+//                                      //@todo send command cancel by user to service
+//                                      mapArrayList.get(position).mIsCancelJob = 1;
+//                                      mapArrayList.remove(position);
+//                                      CaseAdapter.this.notifyDataSetChanged();
 
                                     }
                                 })

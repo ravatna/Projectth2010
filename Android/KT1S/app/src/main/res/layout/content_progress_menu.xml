@@ -7,9 +7,35 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:padding="8dp"
+    android:orientation="vertical"
+
+    android:background="@color/colorPrimary"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.projectth.mobile.kt1s.ProgressMenuActivity"
     tools:showIn="@layout/activity_progress_menu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_cuve_fill_white_stroke_gray"
+        >
+        <ImageView
+            android:layout_marginLeft="4dp"
+            android:layout_width="24dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_folder"
+            />
+
+
+        <Button
+            android:id="@+id/btnClearCurrentClaim"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:background="#00ffffff"
+            android:visibility="visible"
+            android:text="เปิดงานอื่น"
+            />
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,28 +44,29 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
         <LinearLayout
+            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:orientation="vertical"
+
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/txvCaseCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:textColor="#FFFFFF"
                 android:text="รหัส: KT000001 เลขเคลม: XXXXXXXXXXXX"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:visibility="visible" />
 
             <TextView
-                android:layout_margin="5dp"
                 android:visibility="visible"
-                android:id="@+id/txvPName"
+                android:textColor="#FFFFFF"
+                android:id="@+id/txvInsuranceCompanyName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -60,6 +87,7 @@
                 android:background="@drawable/selector_button_cyan"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
+
                 android:text="ใบรับแจ้ง" />
 
             <Button
@@ -168,7 +196,7 @@
                 android:textColor="#ffffff"
                 android:textSize="18sp"
                 android:id="@+id/btnManageK"
-                android:text="ส่งข้อมูล" />
+                android:text="จัดเก็บข้อมูล" />
 
             </LinearLayout>
 
@@ -185,12 +213,12 @@
                 android:background="@drawable/selector_button_cyan"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
-                android:id="@+id/btnPhone1"
+                android:id="@+id/btnManagerTel"
 
                 android:text="เบอร์ผู้จัดการ" />
 
             <Button
-                android:id="@+id/btnPhone2"
+                android:id="@+id/btnInformTel"
                 android:layout_width="120dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="30dp"
@@ -198,6 +226,26 @@
                 android:text="เบอร์รับแจ้ง"
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:background="@drawable/selector_button_cyan"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:id="@+id/btnConsoult"
+
+                android:text="เบอร์ปรึกษางาน" />
+
+
         </LinearLayout>
 
     </LinearLayout>

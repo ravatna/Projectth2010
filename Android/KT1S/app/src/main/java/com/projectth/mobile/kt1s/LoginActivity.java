@@ -2,18 +2,21 @@ package com.projectth.mobile.kt1s;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.squareup.okhttp.FormEncodingBuilder;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -21,6 +24,7 @@ import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 
@@ -34,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
-    private static final String MY_PREFS = "projectth_kteclaim";
     private Button  btnLogin;
 
     @Override
@@ -42,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        sharedPreferences = getApplicationContext().getSharedPreferences(MY_PREFS, Context.MODE_PRIVATE);
+        sharedPreferences = getApplicationContext().getSharedPreferences(App.MY_PREFS, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
         initView();
@@ -52,8 +55,8 @@ public class LoginActivity extends AppCompatActivity {
 
         edtUsername = (EditText)findViewById(R.id.edtUsername);
         edtPassword = (EditText)findViewById(R.id.edtPassword);
-        edtUsername.setText("0831356653");
-        edtPassword.setText("6653");
+        edtUsername.setText("kt000");
+        edtPassword.setText("kt000");
 
         btnLogin = (Button)findViewById(R.id.btnLogin);
         txvVersion = (TextView)findViewById(R.id.txvVersion);
@@ -75,21 +78,28 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void doLogin() {
-        Intent intent = new Intent(LoginActivity.this,TaskActivity.class);
-        startActivity(intent);
-        finish();
 
-//        new Login().execute();
+
+        new Login().execute();
     }
 
+
+    /**
+     * Class login by service
+     */
     private class Login extends AsyncTask<Void, Void, String> {
         String strJson,postUrl;
         ProgressDialog pd;
+        String u,p;
+
+
         @Override
         protected void onPreExecute() {
             // Create Show ProgressBar
-            strJson = "{'mobile_customer':'" + edtUsername.getText().toString()  + "','pass_customer':'" + edtPassword.getText().toString() + "'}";
-            postUrl  = App.getInstance().m_server + "/Security/login_customer_susco";
+            u  = edtUsername.getText().toString();
+            p = edtPassword.getText().toString();
+
+            postUrl  = App.getInstance().m_server + "/login/login_api";
             pd = new ProgressDialog(LoginActivity.this);
             pd.setMessage("กำลังดำเนินการ...");
             pd.setCancelable(false);
@@ -101,7 +111,22 @@ public class LoginActivity extends AppCompatActivity {
 
             String result = null;
             try {
-                result = post(postUrl, strJson);
+                RequestBody formBody = new FormEncodingBuilder()
+                        .add("u",u)
+                        .add("p", p)
+                        .build();
+
+                Request request = new Request.Builder()
+                        .url(postUrl)
+                        .post(formBody)
+                        .build();
+
+
+                Response response = client.newCall(request).execute();
+                return response.body().string();
+
+
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -120,39 +145,58 @@ public class LoginActivity extends AppCompatActivity {
 
         }
 
-        public  final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
         OkHttpClient client = new OkHttpClient();
 
-        String post(String url, String json) throws IOException {
-            RequestBody body = RequestBody.create(JSON, json);
-            Request request = new Request.Builder()
-                    .url(url)
-                    .post(body)
-                    .build();
-            Response response = client.newCall(request).execute();
-            return response.body().string();
-        }
 
     }
 
     private void parseResultLogin(String result) {
 
         try {
-//            JSONObject jsonObj = new JSONObject(result);
-//            App.getInstance().loginObject = jsonObj;
-//            JSONArray arr = jsonObj.getJSONArray("customer_detail");
-//
-//            App.getInstance().formToken = jsonObj.getString("formToken");
-//            App.getInstance().cookieToken = jsonObj.getString("cookieToken");
-//
-//            App.getInstance().customerMember = arr.getJSONObject(0);
-//            App.getInstance().selectNews = jsonObj.getJSONArray("select_news");
 
-            // when logoin state valid next load dialy transaction
-            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-            startActivity(intent);
-            finish();
+            JSONObject jsonObj = new JSONObject(result);
+
+            if(jsonObj.getString("status").equals("success")) {
+                App.getInstance().loginObject = jsonObj;
+
+                App.getInstance().claimOfficer.id  = "";
+                App.getInstance().claimOfficer.fullname  = jsonObj.getJSONObject("data").getString("firstname")
+                        + "  " +  jsonObj.getJSONObject("data").getString("lastname");
+
+
+                App.getInstance().claimOfficer.user  = jsonObj.getJSONObject("data").getString("username");
+                App.getInstance().claimOfficer.pass  = jsonObj.getJSONObject("data").getString("password");
+
+
+                // commit content
+                editor.putString("login_json", jsonObj.toString());
+                editor.commit();
+
+                // when logoin state valid next load dialy transaction
+                Intent intent = new Intent(LoginActivity.this, TaskActivity.class);
+                startActivity(intent);
+                finish();
+            }else{
+
+                new AlertDialog.Builder(LoginActivity.this)
+                        .setTitle("เข้าสู่ระบบ")
+                        .setMessage("ไม่สามารถเข้าสู่ระบบ เนื่องจาก ชื่อผู้ใช้งาน หรือ รหัสผ่านไม่ถูกต้อง")
+                        .setNeutralButton("ปิด",
+                                new DialogInterface.OnClickListener() {
+
+                                    @Override
+                                    public void onClick(DialogInterface dialog,
+                                                        int which) {
+                                        dialog.dismiss();
+
+
+                                    }
+                                })
+
+                        .show();
+
+            }
 
         } catch (Exception e) {
             e.printStackTrace();

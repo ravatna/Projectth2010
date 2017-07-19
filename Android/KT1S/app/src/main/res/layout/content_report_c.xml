@@ -8,9 +8,10 @@
     android:orientation="vertical"
     tools:context="com.projectth.mobile.kt1s.ReportPActivity">
     <Button
+        android:background="@drawable/ic_photo_camera"
+        android:id="@+id/btnTakePicture"
         android:layout_gravity="right"
-        android:text="บันทึก"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content" />
     <ScrollView
         android:layout_width="match_parent"
@@ -220,6 +221,8 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
@@ -228,12 +231,12 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="จังหวัด"
-                    android:textAlignment="textEnd" />
+                    android:layout_gravity="center_vertical|right"
+                    android:text="จังหวัด"  />
 
 
                 <Spinner
+                    android:layout_marginLeft="4dp"
                     android:id="@+id/spinner"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"

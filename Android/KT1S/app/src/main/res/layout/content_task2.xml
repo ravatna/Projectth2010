@@ -6,18 +6,65 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.projectth.mobile.kt1s.TaskActivity"
-    tools:showIn="@layout/activity_task">
+    tools:showIn="@layout/activity_task"
+    android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_cuve_fill_white_stroke_gray"
+        >
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_exit"
+            />
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="50dp"
+            android:layout_height="32dp"
+            android:background="#00ffffff"
+            android:text="ออก"
+            />
+
+        <Button
+            android:id="@+id/btnClearCurrentClaim"
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:background="#00ffffff"
+            android:visibility="gone"
+            android:text="เปิดงานอื่น"
+            />
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_repeat"
+            />
+        <Button
+            android:id="@+id/btnRefreshCurrentClaim"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:text="โหลดข้อมูลใหม่"
+            android:background="#00ffffff"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:id="@+id/txvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="งานภาพรวม:"
+            ></TextView>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/lstTask"
         android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
         android:dividerHeight="0dp"
         tools:listitem="@layout/_item_task"
         android:layout_height="match_parent" >
-
-
     </ListView>
-
-
 </LinearLayout>

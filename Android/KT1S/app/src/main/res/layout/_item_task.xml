@@ -13,10 +13,10 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
         android:orientation="vertical"
         android:paddingTop="25dp"
         app:cardCornerRadius="2dp"
@@ -59,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
                 android:layout_weight="1"
+                android:textSize="14sp"
                 android:text="เวลารับแจ้ง: " />
             </LinearLayout>
 
@@ -68,36 +69,36 @@
                 android:id="@+id/txvCaseCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="1dp"
                 android:text="รหัส: KT000001 เลขเคลม: XXXXXXXXXXXX"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:visibility="visible" />
 
             <TextView
 
-                android:layout_margin="5dp"
+                android:layout_margin="1dp"
                 android:visibility="visible"
-                android:id="@+id/txvPName"
+                android:id="@+id/txvInsuranceCompanyName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:text="บ. ประกัน : วิริยะประกันภัย" />
             <TextView
-                android:layout_margin="5dp"
+                android:layout_margin="1dp"
                 android:visibility="visible"
                 android:id="@+id/txvCarBrand_plate_license"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:text="ยี่ห้อ/ทะเบียน:" />
             <TextView
-                android:layout_margin="5dp"
+                android:layout_margin="1dp"
                 android:visibility="visible"
                 android:id="@+id/txvAccidentPlace"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:text="ที่เกิดเหตุ: Place address" />
 
             <RelativeLayout
