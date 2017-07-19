@@ -7,11 +7,34 @@
     android:layout_margin="8dp"
     android:orientation="vertical"
     tools:context="com.projectth.mobile.kt1s.ReportPActivity">
-    <Button
-        android:layout_gravity="right"
-        android:text="บันทึก"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="บันทึก"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/btn_save_k"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_photo_camera"
+            android:id="@+id/btnTakePicture"
+            android:layout_gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_alignParentRight="true"
+            android:text="ลบ ค."
+            android:id="@+id/btn_delete_k"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

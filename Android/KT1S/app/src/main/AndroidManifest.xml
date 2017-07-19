@@ -124,6 +124,7 @@
             android:label="@string/title_activity_report_cdamage2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:windowSoftInputMode="stateHidden"
             android:name=".ReportC2Activity"
             android:label="@string/title_activity_report_c2"
             android:theme="@style/AppTheme.NoActionBar"></activity>

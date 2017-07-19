@@ -204,12 +204,13 @@
         <item>บริษัท เจ้าพระยาประกันภัย จำกัด (มหาชน)</item>
         <item> สัจจะประกันภัย จำกัด (มหาชน)</item>
     </string-array>
-    <string name="title_activity_report_asset">ReportAssetActivity</string>
-    <string name="title_activity_report_injurk">ReportInjurkActivity</string>
+
+    <string name="title_activity_report_asset">ข้อมูลทรัพย์สิน</string>
+    <string name="title_activity_report_injurk">ข้อมูลผู้บาดเจ็บ</string>
     <string name="title_activity_report_case_detail">ReportCaseDetailActivity</string>
-    <string name="title_activity_report_pdamage">ReportPDamageActivity</string>
-    <string name="title_activity_report_cdamage">ReportCDamageActivity</string>
+    <string name="title_activity_report_pdamage">ความเสียหาย ป.</string>
+    <string name="title_activity_report_cdamage">ความเสียหาย ค.</string>
     <string name="title_activity_report_case_c">ReportCaseCActivity</string>
     <string name="title_activity_report_cdamage2">ReportCDamage2Activity</string>
-    <string name="title_activity_report_c2">ReportC2Activity</string>
+    <string name="title_activity_report_c2">ข้อมูล ค.</string>
 </resources>

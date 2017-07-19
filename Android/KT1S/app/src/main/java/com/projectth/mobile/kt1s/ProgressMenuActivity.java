@@ -228,7 +228,7 @@ public class ProgressMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + ""));
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "0648502403"));
                 if (ActivityCompat.checkSelfPermission(ProgressMenuActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions

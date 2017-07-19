@@ -1,9 +1,11 @@
 package com.projectth.mobile.kt1s;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -32,7 +34,7 @@ public class ReportC2Activity extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private SectionsPagerAdapter mSectionsPagerAdapter;
-
+    private int numOfK = 1;
     /**
      * The {@link ViewPager} that will host the section contents.
      */
@@ -56,14 +58,7 @@ public class ReportC2Activity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
     }
 
@@ -84,6 +79,8 @@ public class ReportC2Activity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            numOfK++;
+            mSectionsPagerAdapter.notifyDataSetChanged();
             return true;
         }
 
@@ -119,21 +116,57 @@ public class ReportC2Activity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_report_c2, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            // textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             Button btnTakePhoto = (Button)rootView.findViewById(R.id.btnTakePicture);
+            Button btnSaveK = (Button)rootView.findViewById(R.id.btn_save_k);
+            Button btnDeleteK = (Button)rootView.findViewById(R.id.btn_delete_k);
+
+            btnDeleteK.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new AlertDialog.Builder(getActivity())
+                            .setTitle("ลบข้อมูล")
+                            .setMessage("ต้องการลบข้อมูล ค. ใช่หรือไม่? " )
+                            .setPositiveButton("ปิด",
+                                    new DialogInterface.OnClickListener() {
+
+                                        @Override
+                                        public void onClick(DialogInterface dialog,
+                                                            int which) {
+
+                                        }
+                                    })
+                            .show();
+                }
+            });
+
+            btnSaveK.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new AlertDialog.Builder(getActivity())
+                            .setTitle("บันทึกข้อมูล")
+                            .setMessage("ต้องการบันทึกข้อมูล ค. ใช่หรือไม่? " )
+                            .setPositiveButton("ปิด",
+                                    new DialogInterface.OnClickListener() {
+
+                                        @Override
+                                        public void onClick(DialogInterface dialog,
+                                                            int which) {
+
+                                        }
+                                    })
+                            .show();
+                }
+            });
+
             btnTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 Intent intent = new Intent (getActivity(),TakePhotoCaseActivity.class);
                 startActivity(intent);
             }
         });
-
-
-
 
             return rootView;
         }
@@ -159,20 +192,13 @@ public class ReportC2Activity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return numOfK;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "SECTION 1";
-                case 1:
-                    return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
-            }
-            return null;
+
+            return "ค." + (position+1);
         }
     }
 }
