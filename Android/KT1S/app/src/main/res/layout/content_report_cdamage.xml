@@ -7,12 +7,20 @@
     android:orientation="vertical"
     tools:context="com.projectth.mobile.kt1s.ReportPDamageActivity"
     tools:showIn="@layout/activity_report_pdamage">
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_gravity="right"
-        android:layout_height="wrap_content"
-        android:text=" บันทึก " />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="บันทึก"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/btn_save_k"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

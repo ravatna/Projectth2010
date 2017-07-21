@@ -12,6 +12,259 @@
     <string name="title_activity_tab_report_c">TabReportCActivity</string>
 
 
+
+    <string-array name="list_license_type">
+        <item>รถยนต์ส่วนบุคคล</item>
+        <item>รถยนต์ส่วนบุคคลชั่วคราว</item>
+        <item>รถยนต์ส่วนบุคคลตลอดชีพ</item>
+        <item>รถจักรยานยนต์ส่วนบุคคล</item>
+        <item>รถจักรยานยนต์ส่วนบุคคลชั่วคราว</item>
+        <item>รถจักรยานยนต์ส่วนบุคคลตลอดชีพ</item>
+        <item>ชนิดที่ 2</item>
+        <item>ชนิดที่ 3</item>
+        <item>ชนิดที่ 4</item>
+        <item>ไม่พกพา</item>
+        <item>ไม่มี</item>
+        <item>รถยนต์ทหาร</item>
+        <item>ใบขับขี่สากล</item>
+        <item>รถยนต์สาธารณะ</item>
+        <item>รถจักรยานยนต์สาธารณะ</item>
+        <item>ใบอนุญาตเป็นผู้ขับรถทุกประเภท </item>
+    </string-array>
+    
+    <string-array name="list_type_insurance">
+        <item>2</item>
+        <item>3</item>
+        <item>2+</item>
+        <item>3+</item>
+        <item>พรบ.</item>
+        <item>รอตรวจสอบ</item>
+        <item>เบ็ดเตล็ด</item>
+        <item>ตรวจสภาพรถ </item>
+        <item>ไม่มีประกันภัย </item>
+        <item>1</item>
+        <item>ระบุประเภทด้วยครับ </item>
+    </string-array>
+    <string-array name="list_police_station">
+        <item>บางนา</item>
+        <item>บางพลี</item>
+        <item>บางแก้ว</item>
+        <item>ส.น.คลองตัน</item>
+        <item>ส.น.คันนายาว</item>
+        <item>ส.น.โคกคราม</item>
+        <item>ส.น.จรเข้น้อย</item>
+        <item>ส.น.ฉลองกรุง</item>
+        <item>ส.น.ชนะสงคราม</item>
+        <item>ส.น.ชุมชนวัดไผ่เงิน</item>
+        <item>ส.น.โชคชัย</item>
+        <item>ส.น.ดอนเมือง</item>
+        <item>ส.น.ดินแดง</item>
+        <item>ส.น.ดุสิต</item>
+        <item>ส.น.ตลาดพลู</item>
+        <item>ส.น.ตลิ่งชัน</item>
+        <item>ส.น.เตาปูน</item>
+        <item>ส.น.ทองหล่อ</item>
+        <item>ส.น.ท่าข้าม</item>
+        <item>ส.น.ท่าพระ</item>
+        <item>ส.น.ท่าเรือ</item>
+        <item>ส.น.ทุ่งครุ</item>
+        <item>ส.น.ทุ่งมหาเมฆ</item>
+        <item>ส.น.เทียนทะเล</item>
+        <item>ส.น.ธรรมศาลา</item>
+        <item>ส.น.นางเลิ้ง</item>
+        <item>ส.น.นิมิตใหม่</item>
+        <item>ส.น.บวรมงคล</item>
+        <item>ส.น.บางกอกน้อย</item>
+        <item>ส.น.บางกอกใหญ่</item>
+        <item>ส.น.บางขุนเทียน</item>
+        <item>ส.น.บางขุนเทียน</item>
+        <item>ส.น.บางขุนนนท์</item>
+        <item>ส.น.บางเขน</item>
+        <item>ส.น.บางคอแหลม</item>
+        <item>ส.น.บางซื่อ</item>
+        <item>ส.น.บางนา</item>
+        <item>ส.น.บางบอน</item>
+        <item>ส.น.บางพลัด</item>
+        <item>ส.น.บางโพ</item>
+        <item>ส.น.บางโพงพาง</item>
+        <item>ส.น.บางมด</item>
+        <item>ส.น.บางยี่ขัน</item>
+        <item>ส.น.บางยี่เรือ</item>
+        <item>ส.น.บางรัก</item>
+        <item>ส.น.บางเสาธง</item>
+        <item>ส.น.บึงกุ่ม</item>
+        <item>ส.น.บุคคโล</item>
+        <item>ส.น.บุปผาราม</item>
+        <item>ส.น.ปทุมวัน</item>
+        <item>ส.น.ประชาชื่น</item>
+        <item>ส.น.ประชาสำราญ</item>
+        <item>ส.น.ประเวศ</item>
+        <item>ส.น.ปากคลองสาน</item>
+        <item>ส.น.พญาไท</item>
+        <item>ส.น.พระโขนง</item>
+        <item>ส.น.พระราชวัง</item>
+        <item>ส.น.พลับพลาไชย1</item>
+        <item>ส.น.พลับพลาไชย2</item>
+        <item>ส.น.พหลโยธิน</item>
+        <item>ส.น.เพชรเกษม</item>
+        <item>ส.น.ภาษีเจริญ</item>
+        <item>ส.น.มักกะสัน</item>
+        <item>ส.น.มีนบุรี</item>
+        <item>ส.น.ยานนาวา</item>
+        <item>ส.น.แยกบางพลัด(ย่อย)</item>
+        <item>ส.น.ร่มเกล้า</item>
+        <item>ส.น.ราษฎร์บูรณะ</item>
+        <item>ส.น.ลาดกระบัง</item>
+        <item>ส.น.ลาดพร้าว</item>
+        <item>ส.น.ลำผักชี</item>
+        <item>ส.น.ลำหิน</item>
+        <item>ส.น.ลุมพินี</item>
+        <item>ส.น.วังทองหลาง</item>
+        <item>ส.น.วัดพระยาไกร</item>
+        <item>ส.น.ศาลาแดง</item>
+        <item>ส.น.สมเด็จเจ้าพระยา</item>
+        <item>ส.น.สามเสน</item>
+        <item>ส.น.สายไหม</item>
+        <item>ส.น.สำราญราษฎร์</item>
+        <item>ส.น.สำเหร่</item>
+        <item>ส.น.สุทธิสาร</item>
+        <item>ส.น.สุวินทวงศ์</item>
+        <item>ส.น.แสมดำ</item>
+        <item>ส.น.หนองแขม</item>
+        <item>ส.น.หนองค้างพลู</item>
+        <item>ส.น.หนองจอก</item>
+        <item>ส.น.ทุ่งสองห้อง</item>
+        <item>ส.น.ห้วยขวาง</item>
+        <item>ส.น.หัวหมาก</item>
+        <item>ส.น.อุดมสุข</item>
+        <item>ส.ภ.คลองข่อย</item>
+        <item>ส.ภ.ไทรน้อย</item>
+        <item>ส.ภ.บางกรวย</item>
+        <item>ส.ภ.บางบัวทอง</item>
+        <item>ส.ภ.บางศรีเมือง</item>
+        <item>ส.ภ.บางใหญ่</item>
+        <item>ส.ภ.ปลายบาง</item>
+        <item>ส.ภ.ปากเกร็ด</item>
+        <item>ส.ภ.เมืองนนทบุรี</item>
+        <item>ส.ภ.คลองสิบสอง</item>
+        <item>ส.ภ.คลองหลวง</item>
+        <item>ส.ภ.คลองห้า</item>
+        <item>ส.ภ.คูคต</item>
+        <item>ส.ภ.คูบางหลวง</item>
+        <item>ส.ภ.ธัญบุรี</item>
+        <item>ส.ภ.ประตูน้ำจุฬาลงกรณ์</item>
+        <item>ส.ภ.ปากคลองรังสิต</item>
+        <item>ส.ภ.เมืองปทุมธานี</item>
+        <item>ส.ภ.ลาดหลุมแก้ว</item>
+        <item>ส.ภ.ลำลูกกา</item>
+        <item>ส.ภ.สวนพริกไทย</item>
+        <item>ส.ภ.สามโคก</item>
+        <item>ส.ภ.หนองเสือ</item>
+        <item>ส.ภ.คลองด่าน</item>
+        <item>ส.ภ.บางบ่อ</item>
+        <item>ส.ภ.บางปู(ย่อย)</item>
+        <item>ส.ภ.บางพลี</item>
+        <item>ส.ภ.บางพลีน้อย</item>
+        <item>ส.ภ.บางเสาธง</item>
+        <item>ส.ภ.พระประแดง</item>
+        <item>ส.ภ.พระสมุทรเจดีย์</item>
+        <item>ส.ภ.สำโรงใต้</item>
+        <item>ส.ภ.สำโรงเหนือ</item>
+        <item>ส.ภ.เมืองสมุทรปราการ</item>
+        <item>สน.จักรวรรดิ</item>
+        <item>ส.น.วิภาวดี</item>
+        <item>สน.บางเขน</item>
+        <item>สภ.เมืองนนทบุรี สาขารัตนาธิเบศน์</item>
+        <item>สน.บางชัน</item>
+        <item>ส.ภ.ย่อยนวนคร</item>
+        <item>ส.น.สทร8</item>
+        <item>สภ.พระอินทร์ราชา</item>
+        <item>สภ.เมืองชลบุรี</item>
+        <item>ส.น.บางชัน</item>
+        <item>ส.น.หลักสอง</item>
+        <item>สทร.8 กก.8</item>
+        <item>ส.ภ.สาขลา</item>
+        <item>ส.น.ทางด่วน2</item>
+        <item>สทล.เขาดิน</item>
+        <item>ส.น.ทางด่วน1</item>
+        <item>ส.ภ.เมืองพัทยา</item>
+        <item>สน.คูขนานลอยฟ้า</item>
+        <item>ส.ภ.เปร็ง</item>
+        <item>สทล 2</item>
+        <item>ส.ภ.บางปะอิน</item>
+        <item>ส.ภ.บางปะกง</item>
+        <item>ส.ภ.เสม็ด</item>
+        <item>ส.ภ.ดอนหัวฬ่อ</item>
+        <item>สภ.ราชาเทวะ</item>
+        <item>สภ.แสนสุข</item>
+        <item>สภ.โค้งดงตาล</item>
+        <item>ส.ภ.บ้านบึง</item>
+        <item>ส.ภ.หนองขาม</item>
+        <item>ส.ภ.บางละมุง</item>
+        <item>สทล.1กก.8 </item>
+        <item>สภ.ศรีราชา</item>
+        <item>สภ.แหลมฉบัง</item>
+        <item>ส.น.ทางด่วนบางนา-บางพลี</item>
+        <item>สภ.บ่อวิน </item>
+        <item>ส.ภ.พนัสนิคม</item>
+        <item>ส.ภ.ไชโย จ.อ่างทอง</item>
+        <item>สภ.เมืองสมุทรสาคร</item>
+        <item>สภ.บางไทร อยุธยา</item>
+        <item>สภ.บางปะอินทร์</item>
+        <item>สภ.วังน่้อย</item>
+        <item>สภ.ด่านธัญบุรี</item>
+        <item>สภ.เมืองสระบุรี</item>
+        <item>สภ.โพธิ์แก้ว </item>
+        <item>สภ.เมืองนครปฐม </item>
+        <item>สภ.บางแม่นาง</item>
+        <item>ส.ภ.ม่วงค่อม</item>
+        <item>สภ.สัตหีบ </item>
+        <item>สภ.เกาะจันทร์</item>
+        <item>สภ.เมืองสระบุรี </item>
+        <item>สภ.หนองแค สระบุรี</item>
+        <item>สภ.หนองปรือ จ.ชลบุรี </item>
+        <item>สทล.ด่านธัญบุรี</item>
+        <item>สภ.พระอินทร์ราชา</item>
+        <item>สภ.ศรีราชา</item>
+        <item>สภ.พานทอง</item>
+        <item>สภ.เมืองพระนครศรีอยุธยา</item>
+        <item>สภ.แหลมสิงห์ จันทบุรี </item>
+        <item>สภ.เมืองฉะเชิงเทรา </item>
+        <item>สภ.ไชโย</item>
+        <item>สภ.อุทัย</item>
+        <item>สภ.เมืองลพบุรี </item>
+        <item>สภ.ปลวกแดง</item>
+        <item>สภ.ภูธรพระพุทธบาท</item>
+        <item>สภ.แสนสุข</item>
+        <item>สภ.บางซ้าย อยุธยา </item>
+        <item>สภ.นครหลวง</item>
+        <item>สภ.ท่าอากาศยานสุวรรณภูมิ </item>
+        <item>สภ.อุทัย</item>
+        <item>สภ.บางเสาธง</item>
+        <item>สภ.แก่งคอย</item>
+        <item>สภ.ภูธรพระนครศรีอยุธยา</item>
+        <item>สภ.ไชโย</item>
+        <item>สภ.วังน้อย</item>
+        <item>สภ.ท่าเรือ</item>
+        <item>สภ.เมืองระยอง</item>
+        <item>สภ.ภูเก็ต</item>
+        <item>สภ.เมืองลพบุรี </item>
+        <item>สภ.เฉลิมพระเกียรติ</item>
+        <item>สภ.ศาลายา</item>
+        <item>สภ.คลองกิ่ว</item>
+        <item>สทล.ด่านทับช้าง</item>
+        <item>สภ.ช้างใหญ่</item>
+        <item>สภ.สรรยา ชัยนาท</item>
+        <item>สภ.สุวรรณภูมิ </item>
+        <item>สภ.โพธิ์ทอง</item>
+        <item>สภ.ลาดบัวหลวง</item>
+        <item>สภ.เมืองนครปฐม</item>
+        <item>สภ.เสาไห้</item>
+        <item>สภ.โรงช้าง</item>
+
+    </string-array>
+
+
     <string-array name="list_type_license_card">
         <item>ประเภท 1</item>
         <item>ประเภท 2</item>
@@ -21,20 +274,139 @@
     <string-array name="list_damage">
         <item>กันชนหน้า</item>
         <item>กันชนหลัง</item>
+        <item>บังโคลนหน้า ซ้าย</item>
+        <item>บังโคลนหน้า ขวา</item>
+        <item>ประตูหน้า ซ้าย </item>
+        <item>ประตูหลัง ซ้าย </item>
+        <item>ประตูหน้า ขวา</item>
+        <item>ประตูหลัง ขวา</item>
+        <item>บังโคลนหลัง ซ้าย</item>
+        <item>บังโคลนหลัง ขวา</item>
+        <item>ฝากระโปรงหน้า </item>
+        <item>ฝากระโปรงหลัง</item>
+        <item>กระบะ ซ้าย</item>
+        <item>กระบะ ขวา</item>
+        <item>กระจกมองข้าง ซ้าย</item>
+        <item>กระจกมองข้าง ขวา</item>
+        <item>บันไดซ้าย</item>
+        <item>บันไดขวา</item>
+        <item>บันไดเสริมข้างซ้าย</item>
+        <item>บันไดเสริมข้างขวา</item>
+        <item>กันชนเสริมหน้า</item>
+        <item>กันชนเสริมหลั้ง</item>
+        <item>เสาเก๋งหน้าซ้าย</item>
+        <item>เสาเก๋งหน้าขวา</item>
+        <item>เสาเก๋งหลังขวา</item>
+        <item>เสาเก๋งหลังซ้าย</item>
+    </string-array>
+
+    <string-array name="list_car_color">
+        <item>ดำ</item>
+        <item>แดง</item>
+        <item>เขียว</item>
+        <item>ฟ้า</item>
+        <item>น้ำเงิน</item>
+        <item>น้ำตาล</item>
+        <item>เทา</item>
+        <item>บรอน</item>
+        <item>ส้ม</item>
+        <item>เหลือง</item>
+        <item>เขียว-เหลือง</item>
+        <item>ชมพู</item>
+        <item>ขาว</item>
+        <item>หลายสีรถบัส</item>
+        <item>ม่วง</item>
 
     </string-array>
 
 
     <string-array name="list_province">
-        <item>กรุงเทพฯ</item>
         <item>กระบี่</item>
+        <item>กรุงเทพมหานคร</item>
+        <item>กาญจนบุรี</item>
+        <item>กาฬสินธุ์</item>
+        <item>กำแพงเพชร</item>
+        <item>ขอนแก่น</item>
+        <item>จันทบุรี</item>
+        <item>ฉะเชิงเทรา</item>
+        <item>ชลบุรี</item>
+        <item>ชัยนาท</item>
+        <item>ชัยภูมิ</item>
+        <item>ชุมพร</item>
+        <item>เชียงราย</item>
+        <item>เชียงใหม่</item>
+        <item>ตรัง</item>
+        <item>ตราด</item>
+        <item>ตาก</item>
+        <item>นครนายก</item>
+        <item>นครปฐม</item>
+        <item>นครพนม</item>
+        <item>นครราชสีมา</item>
+        <item>นครศรีธรรมราช</item>
+        <item>นครสวรรค์</item>
+        <item>นนทบุรี</item>
+        <item>นราธิวาส</item>
+        <item>น่าน</item>
+        <item>บุรีรัมย์</item>
+        <item>บึงกาฬ</item>
+        <item>ปทุมธานี</item>
+        <item>ประจวบคีรีขันธ์</item>
+        <item>ปราจีนบุรี</item>
+        <item>ปัตตานี</item>
+        <item>พระนครศรีอยุธยา</item>
+        <item>พะเยา</item>
+        <item>พังงา</item>
+        <item>พัทลุง</item>
+        <item>พิจิตร</item>
+        <item>พิษณุโลก</item>
+        <item>เพชรบุรี</item>
+        <item>เพชรบูรณ์</item>
+        <item>แพร่</item>
+        <item>ภูเก็ต</item>
+        <item>มหาสารคาม</item>
+        <item>มุกดาหาร</item>
+        <item>แม่ฮ่องสอน</item>
+        <item>ยโสธร</item>
+        <item>ยะลา</item>
+        <item>ร้อยเอ็ด</item>
+        <item>ระนอง</item>
+        <item>ระยอง</item>
+        <item>ราชบุรี</item>
+        <item>ลพบุรี</item>
+        <item>ลำปาง</item>
+        <item>ลำพูน</item>
+        <item>เลย</item>
+        <item>ศรีสะเกษ</item>
+        <item>สกลนคร</item>
+        <item>สงขลา</item>
+        <item>สตูล</item>
+        <item>สมุทรปราการ</item>
+        <item>สมุทรสงคราม</item>
+        <item>สมุทรสาคร</item>
+        <item>สระแก้ว</item>
+        <item>สระบุรี</item>
+        <item>สิงห์บุรี</item>
+        <item>สุโขทัย</item>
+        <item>สุพรรณบุรี</item>
+        <item>สุราษฎร์ธานี</item>
+        <item>สุรินทร์</item>
+        <item>หนองคาย</item>
+        <item>หนองบัวลำภู</item>
+        <item>อ่างทอง</item>
+        <item>อำนาจเจริญ</item>
+        <item>อุดรธานี</item>
+        <item>อุตรดิตถ์</item>
+        <item>อุทัยธานี</item>
+        <item>อุบลราชธานี</item>
 
     </string-array>
 
     <string-array name="list_damage_level">
-        <item>A</item>
-        <item>B</item>
-        <item>C</item>
+        <item>L</item>
+        <item>M</item>
+        <item>H</item>
+        <item>X</item>
+        <item>แผลเก่า</item>
     </string-array>
 
     <string-array name="list_car_type">

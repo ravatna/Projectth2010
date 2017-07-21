@@ -263,7 +263,7 @@
 
 
                 <Spinner
-                    android:entries="@array/list_type_license_card"
+                    android:entries="@array/list_license_type"
 
                     android:layout_gravity="center_vertical"
                     android:layout_width="240dp"

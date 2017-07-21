@@ -51,7 +51,7 @@
 
                 <Spinner
                     android:entries="@array/list_damage"
-
+                    android:layout_marginLeft="4dp"
                     android:layout_width="100dp"
                     android:layout_weight="1.6"
                     android:background="@drawable/textbox_background"
@@ -61,32 +61,37 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
+                    android:textAlignment="textEnd"
                     android:text="ระดับ"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
 
                 <Spinner
+                    android:layout_marginLeft="4dp"
                     android:entries="@array/list_damage_level"
                     android:id="@+id/spinner"
-                    android:layout_width="100dp"
-                    android:layout_weight="1.6"
+                    android:layout_weight="1"
+
                     android:background="@drawable/textbox_background"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
 
 
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

@@ -166,7 +166,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="105dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -179,7 +179,7 @@
 
                 <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="100dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.6"
                     android:ems="10"
@@ -229,7 +229,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.6"
                     android:ems="10"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
                     android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 

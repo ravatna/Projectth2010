@@ -22,7 +22,7 @@ public class ReportCDamageActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button btnAdd = (Button)findViewById(R.id.btnAdd);
+        //Button btnAdd = (Button)findViewById(R.id.btnAdd);
 
 
 
@@ -36,13 +36,13 @@ public class ReportCDamageActivity extends AppCompatActivity {
 
         final DamageAdapter adapter = new DamageAdapter(ReportCDamageActivity.this, x);
 
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        //btnAdd.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+            //public void onClick(View v) {
               //  x.add(new DamageItem(2,"KT000015","123324","บ. ประกัน :วิริยะประกันภัย","มาสด้า","กท1234","ที่เกิดเหตุ: บางเขน","02/06/2017 1ุ6:36","กำลังทำ"));
 //adapter.notifyDataSetChanged();
-            }
-        });
+           // }
+        //});
 
 //        ListView newsListView = (ListView)findViewById(R.id.listview);
 //        newsListView.setFocusable(false);

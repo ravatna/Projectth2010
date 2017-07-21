@@ -113,7 +113,7 @@ public class ReportAssetActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_report_c2, container, false);
+            View rootView = inflater.inflate(R.layout.content_report_asset, container, false);
             //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             // textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             Button btnTakePhoto = (Button)rootView.findViewById(R.id.btnTakePicture);
