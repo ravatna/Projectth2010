@@ -7,34 +7,12 @@
     android:layout_margin="8dp"
     android:orientation="vertical"
     tools:context="com.projectth.mobile.kt1s.ReportPActivity">
+    <Button
+        android:layout_gravity="right"
+        android:text="บันทึก"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-    <RelativeLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:text="บันทึก"
-            android:layout_alignParentLeft="true"
-            android:id="@+id/btn_save_k"
-            android:layout_gravity="right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_centerInParent="true"
-            android:background="@drawable/ic_photo_camera"
-            android:id="@+id/btnTakePicture"
-            android:layout_gravity="right"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_alignParentRight="true"
-            android:text="ลบ ค."
-            android:id="@+id/btn_delete_k"
-            android:layout_gravity="right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -127,15 +105,14 @@
                     android:layout_gravity="center_vertical"
                     android:text="จังหวัด" />
 
-
-                <Spinner
-                    android:entries="@array/list_province"
-                    android:id="@+id/spinner"
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
                     android:layout_gravity="center_vertical"
-                    android:layout_width="240dp"
-                    android:background="@drawable/textbox_background"
-                    android:layout_height="wrap_content" />
-
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
             <LinearLayout
@@ -166,7 +143,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="105dp"
+                android:layout_height="55dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -179,7 +156,7 @@
 
                 <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.6"
                     android:ems="10"
@@ -229,7 +206,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.6"
                     android:ems="10"
-                    android:inputType="numberDecimal"
+                    android:inputType="text"
                     android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 

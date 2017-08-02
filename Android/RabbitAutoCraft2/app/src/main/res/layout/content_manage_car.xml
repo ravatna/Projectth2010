@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.projectth.mobile.rabbitauto.ManageCarActivity"
+    tools:showIn="@layout/activity_manage_car">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+
+
+            android:layout_weight="1"
+
+            android:background="@mipmap/blue_button"
+            android:text="Save"
+
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_marginTop="10dp"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+
+
+            android:layout_weight="1"
+            android:background="@mipmap/orange_button"
+            android:text="Cancel"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@mipmap/top_banner_text"
+        android:id="@+id/imageView5" />
+
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+        android:text="&lt; Back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="7dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_below="@+id/imageView5"
+        android:padding="16dp"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Car Info" />
+        <Spinner android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spnCarBrand" >
+
+        </Spinner>
+
+
+
+        <EditText
+            android:id="@+id/edtCarModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Model..." />
+
+        <EditText
+
+            android:layout_marginTop="5dp"
+            android:id="@+id/edtBodyNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Chessis Number..." />
+
+
+
+
+        <EditText
+            android:layout_marginTop="15dp"
+            android:id="@+id/edtLicenseNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="License Plate..." />
+
+        <EditText
+
+            android:layout_marginTop="5dp"
+            android:id="@+id/edtLicenseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="License Date..." />
+
+        <EditText
+
+            android:layout_marginTop="5dp"
+            android:id="@+id/edtInsuareDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="Insurance Date..." />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout8"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           >
+
+            <ImageView
+                android:id="@+id/imgPic1"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                app:srcCompat="@mipmap/placeholder" />
+
+            <ImageView
+                android:id="@+id/imgPic1Del"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+
+
+
+                app:srcCompat="@android:drawable/presence_busy"
+                 />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout2"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="11dp">
+
+
+            <ImageView
+                android:id="@+id/imgPic2Del"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@android:drawable/presence_busy"
+                 />
+
+            <ImageView
+                android:id="@+id/imgPic2"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                app:srcCompat="@mipmap/placeholder" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout2"
+            android:layout_marginBottom="11dp">
+
+
+            <ImageView
+                android:id="@+id/imgPic3Del"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+
+                app:srcCompat="@android:drawable/presence_busy"
+                 />
+
+            <ImageView
+                android:id="@+id/imgPic3"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                app:srcCompat="@mipmap/placeholder" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

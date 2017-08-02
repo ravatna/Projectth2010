@@ -47,62 +47,62 @@
                     android:textStyle="bold"
                     android:visibility="visible" />
 
-
-
-                <Spinner
-                    android:entries="@array/list_damage"
-                    android:layout_marginLeft="4dp"
-                    android:layout_width="100dp"
-                    android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
-                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_weight="1"
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
 
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 >
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:textAlignment="textEnd"
                     android:text="ระดับ"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
 
-                <Spinner
-                    android:layout_marginLeft="4dp"
-                    android:entries="@array/list_damage_level"
-                    android:id="@+id/spinner"
+                <EditText
                     android:layout_weight="1"
-
-                    android:background="@drawable/textbox_background"
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content" />
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
 
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 >
 
-                <CheckBox
+                <RadioButton
                     android:id="@+id/radioButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="มีแผลเก่า" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ไม่มีแผลเก่า" />
 
 
             </LinearLayout>

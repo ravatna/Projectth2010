@@ -6,38 +6,12 @@
     android:layout_height="match_parent"
     android:layout_margin="8dp"
     android:orientation="vertical"
-
     tools:context="com.projectth.mobile.kt1s.ReportPActivity">
-
-
-<RelativeLayout
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
     <Button
+        android:layout_gravity="right"
         android:text="บันทึก"
-        android:layout_alignParentLeft="true"
-        android:id="@+id/btn_save_k"
-        android:layout_gravity="right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <Button
-        android:layout_centerInParent="true"
-        android:background="@drawable/ic_photo_camera"
-        android:id="@+id/btnTakePicture"
-        android:layout_gravity="right"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content" />
-    <Button
-android:layout_alignParentRight="true"
-        android:text="ลบ ค."
-        android:id="@+id/btn_delete_k"
-        android:layout_gravity="right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-</RelativeLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -89,50 +63,6 @@ android:layout_alignParentRight="true"
                     android:ems="10"
                     android:inputType="text"
                     android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:gravity="right"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right"
-                    android:text="ประเภทรถ"  />
-
-
-                <Spinner
-                    android:layout_marginLeft="4dp"
-                    android:id="@+id/spnCarType"
-                    android:layout_width="240dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/textbox_background"
-                    android:entries="@array/list_car_type" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:gravity="right"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right"
-                    android:text="สีรถ"  />
-
-
-                <Spinner
-                    android:layout_marginLeft="4dp"
-                    android:id="@+id/spnCarColor"
-                    android:layout_width="240dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/textbox_background"
-                    android:entries="@array/list_car_color" />
             </LinearLayout>
 
 
@@ -290,28 +220,26 @@ android:layout_alignParentRight="true"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="100dp"
-                    android:gravity="right"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right"
-                    android:text="จังหวัด"  />
+                    android:layout_weight=".4"                      android:textAlignment="textEnd"
+                    android:text="จังหวัด" />
 
-
-                <Spinner
-                    android:layout_marginLeft="4dp"
-                    android:id="@+id/spinner"
-                    android:layout_width="240dp"
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/textbox_background"
-                    android:entries="@array/list_province" />
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -347,13 +275,14 @@ android:layout_alignParentRight="true"
                     android:layout_weight=".4"                      android:textAlignment="textEnd"
                     android:text="ประเภทใบขับขี่" />
 
-                <Spinner
-                    android:layout_marginLeft="4dp"
-                    android:id="@+id/spn_license_type"
-                    android:layout_width="240dp"
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/textbox_background"
-                    android:entries="@array/list_license_type" />
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -495,21 +424,14 @@ android:layout_alignParentRight="true"
                     android:textAlignment="textEnd"
                     android:text="มีประกันบริษัท" />
 
-                <!--<EditText-->
-                    <!--android:layout_gravity="center_vertical"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1.6"-->
-                    <!--android:ems="10"-->
-                    <!--android:inputType="text"-->
-                    <!--android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />-->
-
-                <Spinner
-                    android:layout_width="240dp"
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/textbox_background"
-                    android:entries="@array/list_insurance_company" />
-
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -543,7 +465,7 @@ android:layout_alignParentRight="true"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".4"                      android:textAlignment="textEnd"
-                    android:text="เลขเคลม" />
+                    android:text="เลขกรมธรรม์" />
 
                 <EditText
                     android:layout_gravity="center_vertical"
@@ -565,15 +487,16 @@ android:layout_alignParentRight="true"
                     android:layout_weight=".4"
                     android:layout_gravity="center_vertical"
                     android:textAlignment="textEnd"
-                    android:text="ประเภท" />
+                    android:text="เลขเคลม" />
 
-                <Spinner
-                    android:entries="@array/list_type_insurance"
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
                     android:layout_gravity="center_vertical"
-                    android:layout_width="240dp"
-                    android:background="@drawable/textbox_background"
-                    android:layout_height="wrap_content" />
-
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

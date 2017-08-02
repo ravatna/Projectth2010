@@ -7,20 +7,12 @@
     android:orientation="vertical"
     tools:context="com.projectth.mobile.kt1s.ReportPDamageActivity"
     tools:showIn="@layout/activity_report_pdamage">
-    <RelativeLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:text="บันทึก"
-            android:layout_alignParentLeft="true"
-            android:id="@+id/btn_save_k"
-            android:layout_gravity="right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-    </RelativeLayout>
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:layout_height="wrap_content"
+        android:text=" บันทึก " />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,7 +54,6 @@
 
 
     <LinearLayout
-        android:visibility="gone"
         android:padding="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -94,6 +85,38 @@
     </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="ความเสียหาย 2" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="A" />
+
+                <Button
+                    android:id="@+id/btnDel"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text=" - " />
+
+            </LinearLayout>
+            </LinearLayout>
+
     <LinearLayout
         android:padding="10dp"
         android:orientation="vertical"
@@ -114,8 +137,19 @@
     </LinearLayout>
 
 
-<include layout="@layout/_item_damage" />
 
 
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:dividerHeight="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:listitem="@layout/_item_damage">
+
+
+    </ListView>
 
 </LinearLayout>

@@ -22,30 +22,30 @@ public class ReportPDamageActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       // Button btnAdd = (Button)findViewById(R.id.btnAdd);
+        Button btnAdd = (Button)findViewById(R.id.btnAdd);
         final ArrayList<DamageItem> x  = new ArrayList<DamageItem>();
         x.add(new DamageItem(1,"KT000012","123321","บ. ประกัน :วิริยะประกันภัย","มาสด้า","กท1234","ที่เกิดเหตุ: แจ้งวัมฯะ","02/06/2017 14:36","งานใหม่"));
         //x.add(new DamageItem(2,"KT000015","123324","บ. ประกัน :วิริยะประกันภัย","มาสด้า","กท1234","ที่เกิดเหตุ: บางเขน","02/06/2017 1ุ6:36","กำลังทำ"));
         final DamageAdapter adapter = new DamageAdapter(ReportPDamageActivity.this, x);
 
-       // btnAdd.setOnClickListener(new View.OnClickListener() {
-         ///   @Override
-           // public void onClick(View v) {
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                // x.add(new DamageItem(2,"KT000015","123324","บ. ประกัน :วิริยะประกันภัย","มาสด้า","กท1234","ที่เกิดเหตุ: บางเขน","02/06/2017 1ุ6:36","กำลังทำ"));
                 //adapter.notifyDataSetChanged();
-            //}
-        //});
+            }
+        });
 
-//        ListView newsListView = (ListView)findViewById(R.id.listview);
-//        newsListView.setFocusable(false);
-//        newsListView.setAdapter(adapter);
-//        newsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent intent = new Intent(ReportPDamageActivity.this, TaskDetailActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        ListView newsListView = (ListView)findViewById(R.id.listview);
+        newsListView.setFocusable(false);
+        newsListView.setAdapter(adapter);
+        newsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ReportPDamageActivity.this, TaskDetailActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

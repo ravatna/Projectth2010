@@ -56,21 +56,19 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
                     android:layout_weight=".4"
-                    android:text="การเกิดเหตุจากการตรวจสอบ"
-                    android:textAlignment="textEnd" />
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="center_vertical"
+                    android:text="การเกิดเหตุจากการตรวจสอบ" />
 
                 <EditText
+                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="4dp"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
             <LinearLayout
@@ -105,8 +103,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:textAlignment="textEnd"
+                    android:layout_weight=".4" android:textAlignment="textEnd"
                     android:text="อำเภอ" />
 
                 <EditText
@@ -116,9 +113,7 @@
                     android:ems="10"
                     android:inputType="text"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="4dp"
-                    android:background="@drawable/textbox_background"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -132,17 +127,15 @@
                     android:layout_gravity="center_vertical"
                     android:text="จังหวัด" />
 
-
-
-
-                <Spinner
-                    android:entries="@array/list_province"
-                    android:id="@+id/spinner"
-                    android:layout_width="240dp"
-android:layout_gravity="center_vertical"
-                    android:background="@drawable/textbox_background"
-                    android:layout_height="wrap_content" />
-
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
             <LinearLayout
@@ -156,18 +149,17 @@ android:layout_gravity="center_vertical"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".4"
-                    android:text="พื้นที่ ส.น.\n ออกตรวจสอบ"
+                    android:text="พื้นที่ ส.น. ออกตรวจสอบ"
                     android:textAlignment="textEnd" />
 
-                <Spinner
-                    android:entries="@array/list_police_station"
-                    android:id="@+id/spn_police_station"
-                    android:layout_width="100dp"
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:layout_marginLeft="4dp"
-                    android:background="@drawable/textbox_background"
-                    android:layout_height="wrap_content" />
-
+                    android:ems="10"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
             <LinearLayout
@@ -176,8 +168,7 @@ android:layout_gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:textAlignment="textEnd"
+                    android:layout_width="100dp" android:textAlignment="textEnd"
                     android:layout_height="wrap_content"
                     android:layout_weight=".4"
                     android:layout_gravity="center_vertical"
@@ -201,8 +192,7 @@ android:layout_gravity="center_vertical"
                     android:layout_gravity="center_vertical"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:textAlignment="textEnd"
+                    android:layout_weight=".4" android:textAlignment="textEnd"
                     android:text="ชื่อ เจ้าพนักงานสอบสวน" />
 
                 <EditText
@@ -214,30 +204,26 @@ android:layout_gravity="center_vertical"
                     android:inputType="text"
                     android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" android:textAlignment="textEnd"
                     android:layout_weight=".4"
-                    android:text="ความเห็นเจ้า พ.น.ง. สอบสวน"
-                    android:textAlignment="textEnd" />
+                    android:text="ความเห็นเจ้าพนักงานสอบสวน" />
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="4dp"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
+                    android:layout_gravity="center_vertical"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
