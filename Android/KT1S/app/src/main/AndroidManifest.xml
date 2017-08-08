@@ -6,7 +6,6 @@
         android:name="android.hardware.camera"
         android:required="true" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -30,7 +29,7 @@
         </activity>
         <activity
             android:name=".SplashActivity"
-            android:label="@string/app_name"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,8 +55,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_task_detail"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ProgressMenuActivity"
             android:label=""
@@ -74,18 +72,15 @@
         <activity
             android:name=".ReportOverAllActivity"
             android:label="@string/title_activity_report_over_all"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ReportPActivity"
             android:label="@string/title_activity_report_p"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ReportCActivity"
             android:label="@string/title_activity_report_c"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TabReportCActivity"
             android:label="@string/title_activity_tab_report_c"
@@ -93,40 +88,22 @@
         <activity
             android:name=".ReportAssetActivity"
             android:label="@string/title_activity_report_asset"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ReportInjurkActivity"
             android:label="@string/title_activity_report_injurk"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ReportCaseDetailActivity"
             android:label="@string/title_activity_report_case_detail"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ReportPDamageActivity"
             android:label="@string/title_activity_report_pdamage"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ReportCDamageActivity"
             android:label="@string/title_activity_report_cdamage"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".ReportCaseCActivity"
-            android:label="@string/title_activity_report_case_c"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ReportCDamage2Activity"
-            android:label="@string/title_activity_report_cdamage2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:windowSoftInputMode="stateHidden"
-            android:name=".ReportC2Activity"
-            android:label="@string/title_activity_report_c2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

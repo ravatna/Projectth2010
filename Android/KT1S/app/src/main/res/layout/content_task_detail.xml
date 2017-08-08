@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:padding="8dp"
-
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.projectth.mobile.kt1s.TaskDetailActivity"
     tools:showIn="@layout/activity_task_detail">
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp"
-        android:background="@drawable/box_cuve_fill_white_stroke_gray"
-         >
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
 
         <LinearLayout
             android:id="@+id/status_bar"
@@ -47,7 +45,6 @@ android:padding="8dp"
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
                 android:layout_weight="1"
-                android:textSize="14sp"
                 android:text="เวลารับแจ้ง: " />
         </LinearLayout>
 
@@ -57,23 +54,23 @@ android:padding="8dp"
             android:id="@+id/txvCaseCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="5dp"
             android:text="รหัส: KT000001 เลขเคลม: XXXXXXXXXXXX"
-            android:textSize="19sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             android:visibility="visible" />
 
         <TextView
 
-            android:layout_margin="4dp"
+            android:layout_margin="5dp"
             android:visibility="visible"
-            android:id="@+id/txvInsuranceCompanyName"
+            android:id="@+id/txvPName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:text="บ. ประกัน : วิริยะประกันภัย" />
         <TextView
-            android:layout_margin="4dp"
+            android:layout_margin="5dp"
             android:visibility="visible"
             android:id="@+id/txvCarBrand_plate_license"
             android:layout_width="match_parent"
@@ -81,7 +78,7 @@ android:padding="8dp"
             android:textSize="18sp"
             android:text="ยี่ห้อ/ทะเบียน:" />
         <TextView
-            android:layout_margin="4dp"
+            android:layout_margin="5dp"
             android:visibility="visible"
             android:id="@+id/txvAccidentPlace"
             android:layout_width="match_parent"
@@ -90,68 +87,18 @@ android:padding="8dp"
             android:text="ที่เกิดเหตุ: Place address" />
 
 
-        <LinearLayout
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="250dp"
+        <Button
+            android:id="@+id/btnTelToP"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/box_cuve_fill_white_stroke_gray"
-            >
+            android:text="โทรหา ป." />
 
-
-
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_call_phone"
-                />
-            <Button
-                android:scaleType="fitStart"
-                android:id="@+id/btnTelToP"
-                android:layout_marginLeft="4dp"
-                android:gravity="left|center_vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#00ffffff"
-                android:text="โทรหาผู้ชับขี่"
-                android:textColor="@android:color/holo_blue_dark" />
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center_horizontal"
-
-            android:layout_width="250dp"
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnCheckIn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/box_cuve_fill_white_stroke_gray"
-            >
 
-
-
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_gps"
-                />
-
-            <Button
-                android:id="@+id/btnCheckIn"
-
-                android:gravity="left|center_vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginLeft="4dp"
-                android:text="มาถึงสถานที่"
-                android:background="#00ffffff"
-                android:textColor="@android:color/holo_blue_dark"
-                android:visibility="visible" />
-        </LinearLayout>
-
-
+            android:text="มาถึงสถานที่" />
     </LinearLayout>
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

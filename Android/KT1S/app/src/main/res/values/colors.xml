@@ -4,8 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="indigo">#000066</color>
-
     <color name="status_new_job">#FF3636</color>
     <color name="status_current_job">#3344FF</color>
     <color name="status_send_job">#696464</color>

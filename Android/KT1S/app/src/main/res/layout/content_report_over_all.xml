@@ -19,631 +19,497 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
 
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_weight=".4"
-                    android:text="วันที่รับแจ้ง"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:id="@+id/edt_inform_datetime"
-                    android:enabled="false"
-                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="วันที่รับแจ้ง" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
-
-
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
 
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_weight=".4"
-
-                    android:text="เลขเรื่อง บ."
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_claim_id_company"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="เลขเรื่อง บ." />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="เลขเรื่องของท่าน"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_claim_id_self"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="เลขเรื่องของท่าน" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="บ.ประกันภัย"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_company_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="บ.ประกันภัย" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="โทรศัพท์ บ." />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="กรมธรรม์" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="วันที่เริ่ม" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="วันสิ้นสุด" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="โทรศัพท์ บ."
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_insurance_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="ประเภท" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="กรมธรรม์"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:id="@+id/edt_insurance_id"
-                    android:enabled="false"
-                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="อู่/ห้าง" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="วันที่เริ่ม"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:id="@+id/edt_insurance_start_date"
-                    android:enabled="false"
-                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="ยี่ห้อรถ" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="วันสิ้นสุด"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:id="@+id/edt_insurance_end_date"
-                    android:enabled="false"
-                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="ทะเบียน" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="ประเภท"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:id="@+id/edt_insurance_type"
-                    android:enabled="false"
-                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="เลขตัวถัง" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="อู่/ห้าง"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:id="@+id/edt_garage"
-                    android:enabled="false"
-                    android:textColor="#ff0000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-
                     android:layout_weight=".4"
-                    android:text="ยี่ห้อรถ"
-                    android:textAlignment="textEnd" />
+                    android:text="ผู้เอาประกัน" />
 
                 <EditText
-                    android:id="@+id/edt_car_brand"
-                    android:enabled="false"
-                    android:textColor="#ff0000"
+                    android:id="@+id/edtCaseCode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="ทะเบียน"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:id="@+id/edt_car_no"
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_weight=".4"
-                    android:text="เลขตัวถัง"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_vehicle_identification_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_weight=".4"
-                    android:text="ผู้เอาประกัน"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_insurance_owner_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
-            </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="กรมธรรม์ระบุชื่อคนที่ 1"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_insurance_fix_name_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="กรมธรรม์ระบุชื่อคนที่ 1" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="กรมธรรม์ระบุชื่อคนที่ 2"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_insurance_fix_name_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="กรมธรรม์ระบุชื่อคนที่ 2" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="D/D ป."
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_dd_owner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="D/D ป." />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="D/D ค."
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_dd_partie"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="D/D ค." />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="ผู้ขับขี่"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_driver_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="ผู้ขับขี่" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="เบอร์โทร"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_driver_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="เบอร์โทร" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight=".4"
-                    android:text="ลักษณะการเกิดเหตุ"
-                    android:textAlignment="textEnd" />
+                    android:text="ลักษณะการเกิดเหตุ" />
 
                 <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_accident_des"
+                    android:id="@+id/edtCaseCode"
                     android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:layout_marginLeft="4dp"
-                    android:lines="3"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight=".4"
-                    android:text="ผู้แจ้งเหตุ"
-                    android:textAlignment="textEnd" />
-
-                <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_accident_inform"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".4"
+                    android:text="ผู้แจ้งเหตุ" />
+
+                <EditText
+                    android:id="@+id/edtCaseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight=".4"
-                    android:text="หมายเหตุ"
-                    android:textAlignment="textEnd" />
+                    android:text="หมายเหตุ" />
 
                 <EditText
-                    android:enabled="false"
-                    android:textColor="#ff0000"
-                    android:id="@+id/edt_ps"
+                    android:id="@+id/edtCaseCode"
                     android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:background="@drawable/textbox_background"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="" />
+                    android:layout_marginLeft="4dp"                     android:background="@drawable/textbox_background"                     android:text="" />
             </LinearLayout>
 
 
