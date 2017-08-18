@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.location.Location;
 import android.media.Image;
 import android.os.Environment;
@@ -17,6 +18,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -25,6 +27,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polygon;
+import com.google.android.gms.maps.model.PolygonOptions;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -43,7 +47,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GPSTracker gps;
 
     private double lat,lng;
+    private Location tmpLocation;
     private ImageView ivImage;
+
+    ArrayList<Location> location;
+    private TextView txv1,txv2,txv3;
+    private Button btnArea;
+    private Polygon polygon;
+    private Button btnClear;
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -85,27 +96,104 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-ivImage = (ImageView)findViewById(R.id.ivImage);
+
+        //ivImage = (ImageView)findViewById(R.id.ivImage);
         btnMark = (Button) findViewById(R.id.btnMark);
+        btnArea  = (Button)findViewById(R.id.btnArea);
+        btnClear  = (Button)findViewById(R.id.btnClear);
+        txv1 = (TextView)findViewById(R.id.textView);
+        txv2 = (TextView)findViewById(R.id.textView2);
+        txv3 = (TextView)findViewById(R.id.textView3);
+
+        location = new ArrayList<>();
+
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                mMap.clear();
+                location = new ArrayList<Location>();
+                polygon = null;
+            }
+        });
+
         btnMark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
-if(lat != 0 && lng != 0) {
+                if(lat != 0 && lng != 0) {
 
-Toast.makeText(MapsActivity.this,lat + "," +lng,Toast.LENGTH_SHORT).show();
-    // Add a marker in Sydney and move the camera
-    LatLng sydney = new LatLng(lat, lng);
-    mMap.addMarker(new MarkerOptions().position(sydney).title("Lat:" + lat + ", Lng:" + lng));
-    mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney,16));
+                    Toast.makeText(MapsActivity.this,lat + "," +lng,Toast.LENGTH_SHORT).show();
+                    // Add a marker in Sydney and move the camera
+                    LatLng sydney = new LatLng(lat, lng);
+                    location.add(tmpLocation);
 
-    cameraIntent();
-}
+                    mMap.addMarker(new MarkerOptions().position(sydney).title("Lat:" + lat + ", Lng:" + lng));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+                    //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney,16));
+
+                    drawPloygon(lat,lng);
+
+                    // cameraIntent();
+
+                    //calculateAreaOfGPSPolygonOnEarthInSquareMeters(location);
+
+                }// .End if
             }
         });
 
+
+        btnArea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            if(location == null){
+                return;
+            }
+
+try {
+    calculateAreaOfGPSPolygonOnEarthInSquareMeters(location);
+}catch (Exception e){
+    Log.e("xxxx",e.getMessage());
+}
+            }
+        });
+    }
+
+    private void drawPloygon(Double lat,Double lng){
+
+if (location.size() == 0){
+    return;
+}
+        if(polygon != null){
+            polygon.remove();
+
+        }
+
+        PolygonOptions po = new PolygonOptions ();
+
+        for(int i = 0; i < location.size() ;i ++){
+            Location lo = location.get(i);
+
+            po.add(new LatLng(lo.getLatitude(),lo.getLongitude()));
+        }
+
+        Location lo = location.get(0);
+
+        po.add(new LatLng(lo.getLatitude(),lo.getLongitude()));
+
+        //po.add(new LatLng(lat,lng));
+        po.strokeColor(Color.RED);
+        po.fillColor(Color.BLUE);
+        polygon = mMap.addPolygon(po);
+
+//        Polygon polygon = mMap.addPolygon(new PolygonOptions()
+//                .add(new LatLng(0, 0), new LatLng(0, 5), new LatLng(3, 5), new LatLng(0, 0))
+//
+//
+//                );
     }
 
     @Override
@@ -159,6 +247,7 @@ Toast.makeText(MapsActivity.this,lat + "," +lng,Toast.LENGTH_SHORT).show();
             public void onMyLocationChange(Location location) {
                 lat = location.getLatitude();
                 lng = location.getLongitude();
+                tmpLocation = location;
                 //Toast.makeText(MapsActivity.this, location.getLatitude()+","+location.getLongitude(),Toast.LENGTH_LONG).show();
             }
         });
@@ -196,11 +285,11 @@ Toast.makeText(MapsActivity.this,lat + "," +lng,Toast.LENGTH_SHORT).show();
 
     private static final double EARTH_RADIUS = 6371000;// meters
 
-    public static double calculateAreaOfGPSPolygonOnEarthInSquareMeters(final List<Location> locations) {
+    public  double calculateAreaOfGPSPolygonOnEarthInSquareMeters(final List<Location> locations) {
         return calculateAreaOfGPSPolygonOnSphereInSquareMeters(locations, EARTH_RADIUS);
     }
 
-    private static double calculateAreaOfGPSPolygonOnSphereInSquareMeters(final List<Location> locations, final double radius) {
+    private  double calculateAreaOfGPSPolygonOnSphereInSquareMeters(final List<Location> locations, final double radius) {
         if (locations.size() < 3) {
             return 0;
         }
@@ -223,6 +312,8 @@ Toast.makeText(MapsActivity.this,lat + "," +lng,Toast.LENGTH_SHORT).show();
             Log.d(LOG_TAG, String.format("Y %s: %s", listY.size() - 1, listY.get(listY.size() - 1)));
             listX.add(calculateXSegment(longitudeRef, longitude, latitude, circumference));
             Log.d(LOG_TAG, String.format("X %s: %s", listX.size() - 1, listX.get(listX.size() - 1)));
+            txv2.setText(String.format("X %s: %s", listX.size() - 1, listX.get(listX.size() - 1)));
+            txv1.setText(String.format("Y %s: %s", listY.size() - 1, listY.get(listY.size() - 1)));
         }
 
         // calculate areas for each triangle segment
@@ -234,6 +325,7 @@ Toast.makeText(MapsActivity.this,lat + "," +lng,Toast.LENGTH_SHORT).show();
 
             listArea.add(calculateAreaInSquareMeters(x1, x2, y1, y2));
             Log.d(LOG_TAG, String.format("area %s: %s", listArea.size() - 1, listArea.get(listArea.size() - 1)));
+            txv3.setText(String.format("Location: %s, Area = %s", listArea.size() - 1, listArea.get(listArea.size() - 1)));
         }
 
         // sum areas of all triangle segments

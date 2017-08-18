@@ -7,6 +7,11 @@ xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+    <Button
+        android:id="@+id/btnClear"
+        android:text="Clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -20,11 +25,40 @@ xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/btnArea"
+        android:text="Area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-    <ImageView
-        android:id="@+id/ivImage"
-        android:layout_width="240dp"
 
-        android:layout_height="180dp" />
+
+    <TextView
+        android:textSize="20sp"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        android:textSize="20sp"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        android:textSize="20sp"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+
+    <!--<ImageView-->
+        <!--android:id="@+id/ivImage"-->
+        <!--android:layout_width="240dp"-->
+
+        <!--android:layout_height="180dp" />-->
 
 </LinearLayout>
