@@ -21,7 +21,7 @@ require_once("include/include_mysql.php");
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>รายชื่อนักเรียนในระบบทั้งหมด</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +52,7 @@ include "include/include_teacher_nav.php";
 
           <ul class="nav nav-sidebar">
             <li><a href="teacherinfo.php">ข้อมูลส่วนตัว</a></li>
-			<li><a href="list_student.php">นักเรียน</a></li>
+			<!--<li><a href="list_student.php">นักเรียน</a></li>-->
 			<li><a href="list_subject.php">วิชาที่เปิดสอน</a></li>
             <li><a href="dashboard_teacher.php">ข้อสอบ</a></li>
           </ul>

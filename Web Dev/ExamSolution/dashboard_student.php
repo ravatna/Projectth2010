@@ -73,9 +73,11 @@ if($_SESSION['id'] == "")
               <thead>
                 <tr>
                   <th>#</th>
+				  <th>วิชา</th>
                   <th>ชุดข้อสอบ</th>
 				  <th>กำหนดเวลา</th>
 		  <th>ชั้นปี</th>
+		  <th>อาจารย์</th>
                   <th>วันที่เริ่ม</th>
                   <th>วันที่สิ้นสุด</th>
 				  <th></th>
@@ -87,7 +89,7 @@ if($_SESSION['id'] == "")
 // get content from exam
 
 
-$sql = "SELECT id,title,teacher_id,for_class_level,count_down_time,start_date,end_date,status,created_at,description FROM tbl_exam where  start_date <=  curdate() and status = '1' and for_class_level='". $_SESSION['class_level'] ."';";
+$sql = "SELECT tbl_teacher.fullname,tbl_exam.id,major_title,title,teacher_id,for_class_level,count_down_time,start_date,end_date,status,created_at,description FROM tbl_exam left join tbl_teacher on tbl_exam.teacher_id = tbl_teacher.id where  start_date <=  curdate() and status = '1' and for_class_level='". $_SESSION['class_level'] ."' order by major_title asc;";
 $result = mysqli_query($conn,$sql);
 $inum = mysqli_num_rows($result);
 
@@ -96,14 +98,16 @@ $inum = mysqli_num_rows($result);
                   ?>
                   
                   <tr>
-                  <td><?=$i+1; ?></td>
-                  <td><?=$a['title'];?></td>
-				  <td><?=$a['count_down_time'];?> นาที</td>
-                  <td><?=$a['for_class_level'];?></td>
-                  <td><?=$a['start_date'];?></td>
-                  <td><?=$a['end_date'];?></td>
-                  <td>
-			<a class="btn btn-default " style="" href="register_do_exam.php?exam_id=<?=$a['id'] ;?>&title=<?=$a['title'] ;?>" role="button">
+					<td><?=$i+1; ?></td>
+					<td><?=$a['major_title'];?></td>
+					<td><?=$a['title'];?></td>
+					<td><?=$a['count_down_time'];?> นาที</td>
+					<td><?=$a['for_class_level'];?></td>
+					<td><?=$a['fullname'];?></td>
+					<td><?=$a['start_date'];?></td>
+					<td><?=$a['end_date'];?></td>
+					<td>
+						<a class="btn btn-default " style="" href="register_do_exam.php?exam_id=<?=$a['id'] ;?>&title=<?=$a['title'] ;?>" role="button">
                             <span class="">ทำข้อสอบ</span>
                         </a>
                   </td>

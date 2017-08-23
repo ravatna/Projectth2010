@@ -20,7 +20,7 @@ require_once("include/include_mysql.php");
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>รายชื่อผู้สามารถเข้าทำข้อสอบได้</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -104,6 +104,16 @@ $inum = mysqli_num_rows($result);
 		  
           
 	  <h2 class="sub-header">รายชื่อผู้ทำข้อสอบ</h2>
+	  <select  class="form-control"  name="room" id="room">
+		<option value="0" <?=($a['room']==0) ? "selected" : "" ;?>>ทุกห้อง</option>
+		<?php 
+		for($i=1; $i <= 12; $i++){
+			?>
+			<option value="<?=$i;?>" <?=($a['room']==$i) ? "selected" : "" ;?>>ห้อง <?=$i;?></option>
+			<?php
+		}
+		?>
+      </select>
 	  <a class="btn btn-primary " style="" target="_blank" href="list_student_exam_a4.php?exam_id=<?=$_GET['exam_id']; ?>&for_class_level=<?=$a['for_class_level'];?>"  role="button">
                             <span class="glyphicon glyphicon-print"></span> <span class="">พิมพ์รายชื่อผู้ทำข้อสอบ</span>
                         </a>

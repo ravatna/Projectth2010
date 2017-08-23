@@ -20,7 +20,7 @@ require_once("include/include_mysql.php");
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 	
-    <title>Manamge exam</title>
+    <title>จัดการข้อสอบ</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -73,7 +73,7 @@ include "include/include_teacher_nav.php";
                   <?php 
 // get content from exam
 
-$sql = "SELECT id,room,title,type_exam,teacher_id,for_class_level,show_score_on_send,start_date,end_date,status,created_at,description,count_down_time,major_title FROM tbl_exam where (status = '1' and id='". $_GET['exam_id'] ."');";
+$sql = "SELECT id,room,title,type_exam,teacher_id,for_class_level,show_score_on_send,start_date,end_date,status,created_at,description,count_down_time,major_title,never_end_date FROM tbl_exam where (id='". $_GET['exam_id'] ."');";
 $result = mysqli_query($conn,$sql);
 
                   $a = mysqli_fetch_array($result);
@@ -112,6 +112,10 @@ $result = mysqli_query($conn,$sql);
   <div class="form-group">
     <label class="control-label col-sm-2" for="major_title">วิชา</label>
     <div class="col-sm-10"> 
+
+<a class="btn btn-primary " style="" href="list_subject.php" role="button">
+    <span class="">+ เพิ่มวิชาใหม่</span> </a>
+
       <?php 
 	  $sql = "SELECT id,subject_name from tbl_subject;";
 	  $result = mysqli_query($conn,$sql);
@@ -277,7 +281,9 @@ $result = mysqli_query($conn,$sql);
 				  
 				  
         </div>
-		
+		<?php 
+    if (@$_GET['exam_id'] != "" && @$_GET['exam_id'] != "0"){
+      ?>
 <div class="col-sm-12   main">
 <h2 class="sub-header">ข้อคำถาม</h2>
 
@@ -301,7 +307,7 @@ $result = mysqli_query($conn,$sql);
                   <?php 
 // get content from exam
 
- $sql = "SELECT id,exam_id,question,q_picture,choise_1,choise_2,choise_3,choise_4,choise_5,answer_choise,answer_description,created_date FROM tbl_exam_detail where (exam_id='". $_GET['exam_id'] ."');";
+ $sql = "SELECT id,exam_id,question,q_picture,choise_1,choise_2,choise_3,choise_4,choise_5,answer_choise,answer_description,created_date FROM tbl_exam_detail where (exam_id <>'0') and  (exam_id='". $_GET['exam_id'] ."');";
 $result = mysqli_query($conn,$sql);
 if($result){
 $inum = mysqli_num_rows($result);
@@ -359,7 +365,10 @@ $inum = mysqli_num_rows($result);
               </tbody>
             </table>
 			
-			</div>
+      </div>
+      <?php 
+    }
+    ?>
 			<!-- / end list question in set exam -->
 
 		

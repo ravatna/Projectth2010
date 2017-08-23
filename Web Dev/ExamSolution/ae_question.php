@@ -68,6 +68,14 @@ $a = mysqli_fetch_array($result);
           <div class="form-group">
     <label class="control-label col-sm-2" for="q_picture">ภาพประกอบ</label>
     <div class="col-sm-10">
+	
+	
+	<?php if($a['q_picture'] !="") { 
+										
+										echo "<img style='height:200px' src=\"res/{$a['q_picture']}\" alt='{$a['question']}' />";
+										
+									 }  ?>
+	
       <input type="file" class="form-control" name="q_picture" id="q_picture" placeholder="..." value="<?=$a['q_picture'] ?>" />
     </div>
   </div>

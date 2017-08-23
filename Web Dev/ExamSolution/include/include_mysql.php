@@ -8,7 +8,7 @@
 
 $host = "localhost";
 $user= "root";
-$password = "root";
+$password = "12345678";
 $database = "examdb";
 $conn = mysqli_connect($host, $user, $password, $database);
 

@@ -117,15 +117,19 @@ require_once("include/include_mysql.php");
                             <div class="item <?=($i==0) ? "active" : "" ;?>">
                                 <div class="containe r" style="padding:0px !important;">
                                     <h3 class="page-header" style="font-size:24px !important;"><?=$i+1;?>. <?=$a['question'];?></h3>
+                                  
+									<?php if($a['q_picture'] !="") { 
+										
+										echo "<center><img  style='height:200px' src=\"res/{$a['q_picture']}\" alt='{$a['question']}' /></center>";
+										
+									 } else{?>
                                     <br/>
                                     <br/>
                                     <br/>
                                     <br/>
                                     <br/>
                                     <br/>
-                                    <br/>
-                                    <br/>
-									
+									<?php } ?>
 									
 									
                                     <div style="background-color:black; height:214px; padding-top:6px;" >
