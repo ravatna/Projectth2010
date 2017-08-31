@@ -70,7 +70,7 @@ $ic = 0;
                         <img id="img-logo" src="../img/logo_obec.png" style="margin-left:20px; margin-top:4px; position:absolute; float:left; width:40px;" />
                          
                         <div style="border-color:#20a8d8; margin-left:70px; margin-top:20px; font-size:18px; float:left;position:absolute; ">
-                            โรงเรียนวัด
+                            โรงเรียนบ้านหนองหัวช้าง
                         </div>
 
                         <img id="img-logo" src="../img/user.png" style="margin-left:20px; margin-top:70px; position:absolute; float:left; width:80px;" />

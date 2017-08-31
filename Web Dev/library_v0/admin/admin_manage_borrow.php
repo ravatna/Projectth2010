@@ -6,7 +6,7 @@ include "../include/function.php";
 ?>
 
 <html><head>
-        <title>ห้องสมุด 4.0</title>
+        <title>ห้องสมุด 4.0 - จัดการยืม</title>
         <meta charset="utf-8">
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
         <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -52,7 +52,7 @@ include "../include/function.php";
                     style=" width:100%;   height:1230px; " >
                         
                    <!-- form manage book is here -->
-                    <?php include_once("_book_datatable.php"); ?>
+                    <?php include_once("_borrow_list_datatable.php"); ?>
                     </div>
                     
                 </div> <!-- .End column -->
@@ -67,6 +67,8 @@ include "../include/function.php";
 
         </div> <!-- .End container -->
         
+		
+		
 
     </body>
     <script src="../js/jquery-1.11.3.min.js"></script>

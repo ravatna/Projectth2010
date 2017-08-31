@@ -16,6 +16,7 @@
 
 
         </div>
+		
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <div class="input-group input-group-lg">
@@ -28,11 +29,14 @@
     </div>
 <div style="height:15px;"></div>    
     <div class="row">
-        <div class="col-md-12">
-            <div class="input-group input-group-lg">
-                <span class="input-group-addon" id="basic-addon1">รหัสหนังสือ</span>
-                <input type="text" class="form-control" placeholder="รหัสหนังสือ" aria-describedby="basic-addon1">
-            </div>
+        <div class="col-md-6">
+            
+                <input type="button"   class="form-control" value="เลือกหนังสือ" data-toggle="modal" data-target="#login-modal" />
+				 
+        </div>
+		<div class="col-md-6">
+             <input type="button"   class="form-control" value="เลือกหนังสือ จากรายการจอง" data-toggle="modal" data-target="#booking-modal" />
+			 
         </div>
     </div>
     <div style="height:15px;"></div>
@@ -44,7 +48,6 @@
 <table width="100%" class="table table-striped table-bordered table-hover" id="tb_pang">
 <thead>
 	<tr class='alert alert-success'>
-		
     <th width="80">ลำดับ</th>
     <th>รายการ</th>
     <th width="120">จำนวน</th>
@@ -52,7 +55,8 @@
 	</tr>
 </thead>
 
-<tbody id="body_datatable"> 
+<tbody id="body_datatable">
+<!-- 
 	<tr class="odd gradeX"  style="cursor:pointer;" >
 	
 		<td width="80">1</td>
@@ -60,13 +64,21 @@
         <td width="120">1</td>
 		
         <td  width="120" align='center'>
-            <button type="button" class="btn btn-sm btn-danger" onclick="removeTempStore();"><span class="glyphicon glyphicon-trash"></span></button>
+            <button type="button" class="btn btn-sm btn-danger" onclick="removeTempStore();">
+			<span class="glyphicon glyphicon-trash"></span></button>
         </td>
     </tr>
-    
+	-->
 </tbody>
-
 </table>
+
+ <center>
+                <input type="hidden" id="book_id" name="book_id" value="<?=$data['book_id']?>"> 
+                <input id="btn_borrow" name="btn_borrow" type="button" onclick="doBorrow();" value="ยืมหนังสือ" class="btn btn-primary">
+				<input id="btn_return" name="btn_return" type="button" onclick="doReturn();" value="คืนหนังสือ" class="btn btn-warnning">
+                <input id="btn_cancel" name="btn_cancel" type="button" value="ยกเลิก" class="btn btn-danger">&nbsp;&nbsp;
+                
+            </center>
        <script type="text/javascript">
 
 var borrowItems = {}

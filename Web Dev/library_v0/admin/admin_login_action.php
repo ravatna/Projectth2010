@@ -17,10 +17,10 @@ include "../include/function.php";
         $login = mysql_fetch_assoc($query);
 
         if ($num_rows === 0) {
-            echo "<javascript> 
+            echo "<script type='text/javascript'> 
                         alert(\"ผิดพลาด! ไม่มี Username นี้ในระบบ หรือคุณถูกระงับการใช้งาน.\");
                         window.location = \"admin_logout.php\";
-                </javascript>";
+                </script>";
             exit();
         } // End if 
 

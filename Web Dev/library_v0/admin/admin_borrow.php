@@ -13,9 +13,10 @@ include "../include/function.php";
 
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
         <!-- Bootstrap core CSS --> 
-
-        <link rel="stylesheet" type="text/css" href="../css/login_form.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/admin_book_form.css">
         <link rel="stylesheet" type="text/css" href="../css/admin.css">
+		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
         
     </head>
 
@@ -66,9 +67,17 @@ include "../include/function.php";
 
         </div> <!-- .End container -->
         
-
+<?php include_once("_book_for_borrow.php"); ?>
+<?php include_once("_book_from_booking.php"); ?>
     </body>
     <script src="../js/jquery-1.11.3.min.js"></script>
     <script src="../js/bootstrap.min.js"></script> 	 
     <script type="text/javascript" src="../js/jquery.gallery.js"></script>
+	
+	
+	<script>
+	$(document).ready(function(){
+		$('#table_id').DataTable();
+	});
+	</script>
 </html>
