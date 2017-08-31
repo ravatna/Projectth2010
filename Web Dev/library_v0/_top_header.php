@@ -8,7 +8,7 @@
 
     <div style="height:170px;" class="col-md-9">
         <br/><br/><br/>
-        <span style="font-size:40px;"> โรงเรียน</span>
+        <span style="font-size:40px;"> โรงเรียนบ้านหนองหัวช้าง</span>
     </div>
     
 </div> <!-- .End row obec logo -->
